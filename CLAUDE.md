@@ -6,11 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A single-page interactive fantasy-themed map of Seine-et-Marne (French department 77). Each commune is reimagined as a fantasy location (elves, dwarves, trolls, hobbits, etc.) with a short in-character French description. UI text is in French.
 
-The entire project is one self-contained HTML file: `carte_fantasy_77.html`.
+The entire project is one self-contained HTML file: `index.html`.
 
 ## Running
 
-Open `carte_fantasy_77.html` directly in a browser. No build, no dependencies to install, no server required — Leaflet and Google Fonts are loaded from CDNs.
+Open `index.html` directly in a browser. No build, no dependencies to install, no server required — Leaflet and Google Fonts are loaded from CDNs.
 
 ## Architecture
 

@@ -17,7 +17,7 @@ Une carte interactive de la Seine-et-Marne réimaginée en univers fantasy. Chaq
 Aucune installation, aucun build. Ouvrez simplement le fichier dans un navigateur :
 
 ```bash
-open carte_fantasy_77.html
+open index.html
 ```
 
 Leaflet et les polices Google sont chargés depuis des CDN — une connexion internet est nécessaire au premier chargement.
@@ -28,7 +28,7 @@ Tout le projet tient dans un seul fichier HTML auto-suffisant :
 
 ```
 fantasymap/
-└── carte_fantasy_77.html    # HTML + CSS + JS + données
+└── index.html              # HTML + CSS + JS + données
 ```
 
 ## Ajouter ou modifier une ville
