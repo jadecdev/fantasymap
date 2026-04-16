@@ -4,6 +4,8 @@ Une carte interactive de la Seine-et-Marne réimaginée en univers fantasy. Chaq
 
 > « On va dans le 77, une terre souvent citée par les parisiens comme étant remplie de contes et légendes. »
 
+**🌐 Démo en ligne :** https://jadecdev.github.io/fantasymap/
+
 ## Aperçu
 
 - 🗺️ Carte Leaflet centrée sur le département 77
@@ -14,7 +16,9 @@ Une carte interactive de la Seine-et-Marne réimaginée en univers fantasy. Chaq
 
 ## Utilisation
 
-Aucune installation, aucun build. Ouvrez simplement le fichier dans un navigateur :
+Le site est hébergé sur **[GitHub Pages](https://jadecdev.github.io/fantasymap/)** — rien à installer.
+
+Pour le faire tourner en local, aucun build non plus. Ouvrez simplement le fichier dans un navigateur :
 
 ```bash
 open index.html
@@ -24,16 +28,18 @@ Leaflet et les polices Google sont chargés depuis des CDN — une connexion int
 
 ## Structure
 
-Tout le projet tient dans un seul fichier HTML auto-suffisant :
+Le projet est découpé en trois fichiers, chacun avec une responsabilité claire :
 
 ```
 fantasymap/
-└── index.html              # HTML + CSS + JS + données
+├── index.html              # Balisage HTML
+├── styles.css              # Styles (thème fantasy, carte, légende, transcript)
+└── script.js               # Données des villes + logique Leaflet
 ```
 
 ## Ajouter ou modifier une ville
 
-Toutes les données vivent dans le tableau `cities` en haut du `<script>` :
+Toutes les données vivent dans le tableau `cities` en haut de `script.js` :
 
 ```js
 {
