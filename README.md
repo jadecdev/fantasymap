@@ -24,16 +24,18 @@ Leaflet et les polices Google sont chargés depuis des CDN — une connexion int
 
 ## Structure
 
-Tout le projet tient dans un seul fichier HTML auto-suffisant :
+Le projet est découpé en trois fichiers, chacun avec une responsabilité claire :
 
 ```
 fantasymap/
-└── index.html              # HTML + CSS + JS + données
+├── index.html              # Balisage HTML
+├── styles.css              # Styles (thème fantasy, carte, légende, transcript)
+└── script.js               # Données des villes + logique Leaflet
 ```
 
 ## Ajouter ou modifier une ville
 
-Toutes les données vivent dans le tableau `cities` en haut du `<script>` :
+Toutes les données vivent dans le tableau `cities` en haut de `script.js` :
 
 ```js
 {

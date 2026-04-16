@@ -1,0 +1,296 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Crimson Text', Georgia, serif;
+  background: #1a1408;
+  color: #e8d5b0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(180deg, #1a1408 0%, #1a1408ee 70%, #1a140800 100%);
+  padding: 14px 24px 28px;
+  text-align: center;
+}
+
+#header h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #c9a84c;
+  text-shadow: 0 0 20px rgba(201,168,76,0.4), 0 2px 4px rgba(0,0,0,0.8);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header p {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #a0896a;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+#header p.credit {
+  font-size: 0.72rem;
+  color: #8a7454;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+#header p.credit a {
+  color: #c9a84c;
+  text-decoration: none;
+  border-bottom: 1px dotted #c9a84c66;
+}
+#header p.credit a:hover { color: #e8c870; border-bottom-color: #e8c870; }
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Override Leaflet tiles for a darker fantasy look */
+.leaflet-tile-pane { filter: saturate(0.3) brightness(0.55) sepia(0.4) hue-rotate(-10deg); }
+.leaflet-control-zoom a {
+  background: #2a2010 !important;
+  color: #c9a84c !important;
+  border-color: #5a4a2a !important;
+}
+.leaflet-control-zoom a:hover { background: #3a3020 !important; }
+.leaflet-control-attribution { display: none !important; }
+
+/* Custom marker */
+.fantasy-marker {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.fantasy-marker:hover { transform: scale(1.2); }
+
+.marker-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 2px solid #c9a84c;
+  background: radial-gradient(circle at 30% 30%, #3a2a10, #1a1408);
+  box-shadow: 0 0 12px rgba(201,168,76,0.5), 0 0 24px rgba(201,168,76,0.2), inset 0 0 8px rgba(201,168,76,0.15);
+  position: relative;
+}
+.marker-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #c9a84c;
+}
+
+/* Popup styling */
+.leaflet-popup-content-wrapper {
+  background: linear-gradient(135deg, #2a1f0e, #1a1408) !important;
+  border: 1px solid #5a4a2a !important;
+  border-radius: 4px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.7), 0 0 20px rgba(201,168,76,0.15) !important;
+  padding: 0 !important;
+  max-width: 320px;
+}
+.leaflet-popup-tip { background: #2a1f0e !important; border: 1px solid #5a4a2a !important; }
+.leaflet-popup-close-button {
+  color: #c9a84c !important;
+  font-size: 20px !important;
+  top: 6px !important;
+  right: 8px !important;
+}
+.leaflet-popup-content { margin: 0 !important; }
+
+.popup-inner {
+  padding: 16px 18px;
+  min-width: 240px;
+}
+.popup-inner .city-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #c9a84c;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+}
+.popup-inner .city-race {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 0.9rem;
+  color: #d4a853;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.popup-inner .city-race .race-icon { font-size: 1.1rem; }
+.popup-inner .divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #5a4a2a, transparent);
+  margin: 8px 0;
+}
+.popup-inner .description {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #c8b48a;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.popup-inner .pop-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid #5a4a2a;
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  color: #a0896a;
+}
+.popup-inner .pop-badge .pop-number {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: #c9a84c;
+  font-size: 0.9rem;
+}
+
+/* Legend */
+#legend {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #2a1f0eee, #1a1408ee);
+  border: 1px solid #5a4a2a;
+  border-radius: 4px;
+  padding: 12px 16px;
+  max-height: 60vh;
+  overflow-y: auto;
+  width: 220px;
+  backdrop-filter: blur(8px);
+}
+#legend h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  color: #c9a84c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+  font-size: 0.78rem;
+  color: #a0896a;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.legend-item:hover { color: #c9a84c; }
+.legend-item .li-icon { font-size: 1rem; width: 22px; text-align: center; }
+.legend-item .li-name { flex: 1; }
+
+/* Transcript panel */
+#transcript-toggle {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1001;
+  background: #2a1f0e;
+  border: 1px solid #c9a84c;
+  color: #c9a84c;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+#transcript-toggle:hover { background: #3a2a10; }
+
+#transcript-panel {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  height: 100vh;
+  z-index: 1002;
+  background: linear-gradient(135deg, #2a1f0e, #1a1408);
+  border-left: 1px solid #5a4a2a;
+  padding: 24px;
+  overflow-y: auto;
+  transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: -8px 0 32px rgba(0,0,0,0.5);
+}
+#transcript-panel.open { right: 0; }
+#transcript-panel h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #c9a84c;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+#transcript-panel .close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #c9a84c;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.transcript-block {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-left: 2px solid #5a4a2a;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+.transcript-block:hover {
+  border-left-color: #c9a84c;
+  background: rgba(201,168,76,0.05);
+}
+.transcript-block .tb-city {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #c9a84c;
+  margin-bottom: 4px;
+}
+.transcript-block .tb-text {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 0.88rem;
+  color: #a0896a;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  #legend { display: none; }
+  #header h1 { font-size: 1.1rem; }
+  #transcript-panel { width: 100vw; right: -100vw; }
+}
