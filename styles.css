@@ -176,6 +176,15 @@ body {
 }
 .leaflet-popup-content { margin: 0 !important; }
 
+/* Flip popup below the marker when its top would otherwise sit behind the header. */
+.leaflet-popup.popup-flipped .leaflet-popup-content-wrapper,
+.leaflet-popup.popup-flipped .leaflet-popup-close-button {
+  transform: translateY(var(--popup-flip-distance, 0));
+}
+.leaflet-popup.popup-flipped .leaflet-popup-tip-container {
+  transform: translateY(var(--popup-flip-tip-distance, 0)) rotate(180deg);
+}
+
 .popup-inner {
   padding: 16px 18px;
   min-width: 240px;
