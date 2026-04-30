@@ -950,8 +950,29 @@ function syncFromMap() {
   if (newDom !== currentDominant) {
     currentDominant = newDom;
     renderListPanels(newDom);
+    updateHashFromDominant(newDom);
   }
 }
+
+// URL hash sync: `#33` for Gironde, no hash for Vue France.
+// replaceState (not pushState) keeps history clean as the user pans across regions.
+function updateHashFromDominant(domKey) {
+  const targetHash = domKey === null ? '' : '#' + domKey;
+  if (window.location.hash === targetHash) return;
+  const url = window.location.pathname + window.location.search + targetHash;
+  history.replaceState(null, '', url);
+}
+
+function applyHashToMap() {
+  const key = window.location.hash.replace('#', '');
+  if (key && regions[key]) {
+    map.flyTo(regions[key].center, regions[key].zoom, { duration: 1.0 });
+  } else {
+    map.flyToBounds(FRANCE_BOUNDS, { duration: 1.0 });
+  }
+}
+
+window.addEventListener('hashchange', applyHashToMap);
 
 // Transcript toggle
 function toggleTranscript() {
@@ -1115,9 +1136,14 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') setDropdownOpen(false);
 });
 
-// Initial render — fit France, then sync layers and panels.
+// Initial render — honor #region in the URL, otherwise fit France.
 buildAllMarkers();
-map.fitBounds(FRANCE_BOUNDS);
+const initialKey = window.location.hash.replace('#', '');
+if (initialKey && regions[initialKey]) {
+  map.setView(regions[initialKey].center, regions[initialKey].zoom);
+} else {
+  map.fitBounds(FRANCE_BOUNDS);
+}
 syncFromMap();
 
 // Dynamic dropdown positioning based on header height
