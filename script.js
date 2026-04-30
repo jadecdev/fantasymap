@@ -732,7 +732,7 @@ const regions = {
 const map = L.map('map', {
   center: [46.8, 2.5],
   zoom: 6,
-  zoomControl: true
+  zoomControl: false
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -1119,3 +1119,13 @@ document.addEventListener('keydown', (e) => {
 buildAllMarkers();
 map.fitBounds(FRANCE_BOUNDS);
 syncFromMap();
+
+// Dynamic dropdown positioning based on header height
+const headerElement = document.getElementById('header');
+if (headerElement && regionDropdown) {
+  const headerObserver = new ResizeObserver(() => {
+    const headerBottom = headerElement.getBoundingClientRect().bottom;
+    regionDropdown.style.top = (headerBottom + 16) + 'px';
+  });
+  headerObserver.observe(headerElement);
+}
