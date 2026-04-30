@@ -1009,9 +1009,14 @@ function toggleTranscript() {
       panel.style.transition = 'transform 0.25s ease-out';
       panel.style.transform = `translateX(${panel.offsetWidth}px)`;
       setTimeout(() => {
+        // Swap to closed state silently: kill transitions, drop .open + transform,
+        // force reflow, then restore CSS transitions. Otherwise removing .open
+        // re-animates `right` and the panel briefly reappears.
+        panel.style.transition = 'none';
         panel.classList.remove('open');
-        panel.style.transition = '';
         panel.style.transform = '';
+        void panel.offsetWidth;
+        panel.style.transition = '';
       }, 250);
     } else {
       panel.style.transition = 'transform 0.2s ease-out';
