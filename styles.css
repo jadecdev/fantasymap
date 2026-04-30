@@ -96,6 +96,9 @@ body {
 }
 .leaflet-control-attribution { display: none !important; }
 
+/* Keep city popups above all UI chrome (header, legend, dropdown, transcript panel) */
+.leaflet-popup-pane { z-index: 1100 !important; }
+
 /* Custom marker */
 .fantasy-marker {
   position: relative;
