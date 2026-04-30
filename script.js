@@ -780,7 +780,7 @@ function buildAllMarkers() {
         </div>
       </div>
     `;
-    rMarker.bindPopup(rPopup, { maxWidth: 320 });
+    rMarker.bindPopup(rPopup, { maxWidth: 320, autoPan: false });
     rMarker.on('click', () => {
       map.flyTo(region.center, region.zoom, { duration: 1.0 });
     });
@@ -813,7 +813,7 @@ function buildAllMarkers() {
           </div>
         </div>
       `;
-      marker.bindPopup(popupContent, { maxWidth: 320 });
+      marker.bindPopup(popupContent, { maxWidth: 320, autoPan: false });
       marker._city = city;
       marker._regionKey = key;
       cityMarkers.push(marker);
@@ -1030,17 +1030,51 @@ function toggleTranscript() {
   panel.addEventListener('touchcancel', endDrag, { passive: true });
 })();
 
-// Fix: prevent Leaflet popup close button from causing page navigation.
-// Registered once at boot.
-map.on('popupopen', function() {
-  const closeButtons = document.querySelectorAll('.leaflet-popup-close-button');
-  closeButtons.forEach(btn => {
-    btn.setAttribute('href', 'javascript:void(0)');
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
+// On popup open: stop the close button from triggering page navigation,
+// and flip the popup below the marker if its top would land behind the
+// fixed header (autoPan is off, so we never shift the marker around).
+map.on('popupopen', function(e) {
+  const popup = e.popup;
+  const popupEl = popup.getElement();
+  if (!popupEl) return;
+
+  const closeBtn = popupEl.querySelector('.leaflet-popup-close-button');
+  if (closeBtn) {
+    closeBtn.setAttribute('href', 'javascript:void(0)');
+    closeBtn.addEventListener('click', function(ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
       map.closePopup();
     });
+  }
+
+  popupEl.classList.remove('popup-flipped');
+  popupEl.style.removeProperty('--popup-flip-distance');
+  popupEl.style.removeProperty('--popup-flip-tip-distance');
+
+  const marker = popup._source;
+  if (!marker || !marker.getElement) return;
+  const markerEl = marker.getElement();
+  if (!markerEl) return;
+
+  requestAnimationFrame(() => {
+    const wrapperEl = popupEl.querySelector('.leaflet-popup-content-wrapper');
+    const tipEl = popupEl.querySelector('.leaflet-popup-tip-container');
+    if (!wrapperEl || !tipEl) return;
+
+    const wrapperRect = wrapperEl.getBoundingClientRect();
+    const tipRect = tipEl.getBoundingClientRect();
+    const markerRect = markerEl.getBoundingClientRect();
+    const headerEl = document.getElementById('header');
+    const headerBottom = headerEl ? headerEl.getBoundingClientRect().bottom : 0;
+
+    if (wrapperRect.top < headerBottom + 4) {
+      const newWrapperTop = markerRect.bottom + 24;
+      const newTipTop = markerRect.bottom + 4;
+      popupEl.style.setProperty('--popup-flip-distance', (newWrapperTop - wrapperRect.top) + 'px');
+      popupEl.style.setProperty('--popup-flip-tip-distance', (newTipTop - tipRect.top) + 'px');
+      popupEl.classList.add('popup-flipped');
+    }
   });
 });
 
