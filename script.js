@@ -741,7 +741,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const legendEl = document.getElementById('legend');
 const transcriptEl = document.getElementById('transcript-panel');
-const headerH1 = document.querySelector('#header h1');
 const headerP = document.querySelector('#header > p');
 const legendH3 = legendEl.querySelector('h3');
 
@@ -857,7 +856,6 @@ function renderListPanels(domKey) {
   if (domKey === null) {
     // ----- Vue France -----
     document.title = '⚔️ Carte Fantasy de France';
-    headerH1.textContent = '⚔️ Carte Fantasy de France ⚔️';
     headerP.textContent = 'Sept terres, sept peuples — choisis ta destination';
     legendH3.textContent = 'Régions de France';
 
@@ -894,7 +892,6 @@ function renderListPanels(domKey) {
     // ----- Vue département -----
     const region = regions[domKey];
     document.title = region.title;
-    headerH1.textContent = region.h1;
     headerP.textContent = region.headerP;
     legendH3.textContent = region.legendH3;
 
@@ -935,12 +932,16 @@ function renderListPanels(domKey) {
     });
   }
 
-  // Active button state
-  document.querySelectorAll('.region-btn').forEach(b => {
-    const active = (domKey === null && b.dataset.region === 'france')
-                || (domKey !== null && b.dataset.region === domKey);
-    b.classList.toggle('active', active);
+  // Active dropdown state + trigger label
+  const activeKey = domKey === null ? 'france' : domKey;
+  let activeLabel = '🗺️ Vue France';
+  document.querySelectorAll('.region-dropdown-item').forEach(item => {
+    const isActive = item.dataset.region === activeKey;
+    item.classList.toggle('active', isActive);
+    if (isActive) activeLabel = item.textContent.trim();
   });
+  const ddLabel = document.querySelector('.region-dropdown-trigger .dd-label');
+  if (ddLabel) ddLabel.textContent = activeLabel;
 }
 
 function syncFromMap() {
@@ -974,16 +975,38 @@ map.on('popupopen', function() {
 map.on('zoomend', syncFromMap);
 map.on('moveend', syncFromMap);
 
-// Region selector wiring
-document.querySelectorAll('.region-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (btn.dataset.region === 'france') {
+// Region dropdown wiring
+const regionDropdown = document.getElementById('region-dropdown');
+const regionTrigger = regionDropdown.querySelector('.region-dropdown-trigger');
+
+function setDropdownOpen(open) {
+  regionDropdown.classList.toggle('open', open);
+  regionTrigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+regionTrigger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  setDropdownOpen(!regionDropdown.classList.contains('open'));
+});
+
+document.querySelectorAll('.region-dropdown-item').forEach(item => {
+  item.addEventListener('click', () => {
+    if (item.dataset.region === 'france') {
       map.flyToBounds(FRANCE_BOUNDS, { duration: 1.0 });
     } else {
-      const r = regions[btn.dataset.region];
+      const r = regions[item.dataset.region];
       map.flyTo(r.center, r.zoom, { duration: 1.0 });
     }
+    setDropdownOpen(false);
   });
+});
+
+document.addEventListener('click', (e) => {
+  if (!regionDropdown.contains(e.target)) setDropdownOpen(false);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setDropdownOpen(false);
 });
 
 // Initial render — fit France, then sync layers and panels.
