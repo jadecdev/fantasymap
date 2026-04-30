@@ -11,19 +11,26 @@
 </head>
 <body>
 
-<div id="header">
-  <h1>⚔️ Carte Fantasy ⚔️</h1>
+<header id="header">
+  <h1>⚔️ Carte Fantasy de France ⚔️</h1>
   <p>—</p>
-  <p class="credit">Inspiré des vidéos de <a href="https://www.instagram.com/maxim_penet/reels/" target="_blank" rel="noopener noreferrer">@maxime_penet</a></p>
-  <div id="region-selector">
-    <button class="region-btn region-btn-france" data-region="france">🗺️ Vue France</button>
-    <button class="region-btn" data-region="13">13 — Bouches-du-Rhône</button>
-    <button class="region-btn" data-region="33">33 — Gironde</button>
-    <button class="region-btn" data-region="38">38 — Isère</button>
-    <button class="region-btn" data-region="59">59 — Nord</button>
-    <button class="region-btn" data-region="62">62 — Pas-de-Calais</button>
-    <button class="region-btn" data-region="69">69 — Rhône</button>
-    <button class="region-btn" data-region="77">77 — Seine-et-Marne</button>
+</header>
+
+<div id="region-dropdown" class="region-dropdown">
+  <button class="region-dropdown-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+    <span class="scroll-icon">📜</span>
+    <span class="dd-label">🗺️ Vue France</span>
+    <span class="chevron">▾</span>
+  </button>
+  <div class="region-dropdown-menu" role="listbox">
+    <button class="region-dropdown-item" data-region="france" role="option">🗺️ Vue France</button>
+    <button class="region-dropdown-item" data-region="13" role="option">13 — Bouches-du-Rhône</button>
+    <button class="region-dropdown-item" data-region="33" role="option">33 — Gironde</button>
+    <button class="region-dropdown-item" data-region="38" role="option">38 — Isère</button>
+    <button class="region-dropdown-item" data-region="59" role="option">59 — Nord</button>
+    <button class="region-dropdown-item" data-region="62" role="option">62 — Pas-de-Calais</button>
+    <button class="region-dropdown-item" data-region="69" role="option">69 — Rhône</button>
+    <button class="region-dropdown-item" data-region="77" role="option">77 — Seine-et-Marne</button>
   </div>
 </div>
 
@@ -33,12 +40,18 @@
   <h3>Peuples du 77</h3>
 </div>
 
-<button id="transcript-toggle" onclick="toggleTranscript()">📜 Transcript</button>
+<button id="transcript-toggle" onclick="toggleTranscript()">📜 Description</button>
 
 <div id="transcript-panel">
   <button class="close-btn" onclick="toggleTranscript()">✕</button>
-  <h2>📜 Transcript</h2>
+  <h2>📜 Description</h2>
 </div>
+
+<footer id="footer">
+  <span>Descriptions sourcées des vidéos de <a href="https://www.instagram.com/maxim_penet/reels/" target="_blank" rel="noopener noreferrer">@maxime_penet</a></span>
+  <span class="footer-sep">·</span>
+  <span>© <a href="https://github.com/jadecdev" target="_blank" rel="noopener noreferrer">@jadecdev</a></span>
+</footer>
 
 <script src="script.js"></script>
 </body>
