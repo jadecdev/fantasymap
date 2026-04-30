@@ -1,6 +1,6 @@
-# ⚔️ Carte Fantasy du 77
+# ⚔️ Carte Fantasy
 
-Une carte interactive de la Seine-et-Marne réimaginée en univers fantasy. Chaque commune devient un lieu peuplé d'elfes, de nains, de trolls, de hobbits, de centaures… avec sa propre petite légende.
+Une carte interactive de départements français réimaginés en univers fantasy. Chaque commune devient un lieu peuplé d'elfes, de nains, de trolls, de hobbits, de vampires bourgeois, de skavens marseillais… avec sa propre petite légende.
 
 > « On va dans le 77, une terre souvent citée par les parisiens comme étant remplie de contes et légendes. »
 
@@ -8,10 +8,12 @@ Une carte interactive de la Seine-et-Marne réimaginée en univers fantasy. Chaq
 
 ## Aperçu
 
-- 🗺️ Carte Leaflet centrée sur le département 77
-- 🧝 18 villes transformées en lieux fantasy (Fontainebleau = capitale des Hauts-Elfes, Melun = forteresse des trolls, Coulommiers = clan de nains fromagers, etc.)
-- 📜 Panneau « transcript » latéral listant toutes les légendes
-- 🏰 Légende cliquable qui recentre la carte sur la ville choisie
+- 🗺️ Vue France au démarrage : 7 marqueurs régionaux (un par département) sur la carte de France
+- 🔍 Au zoom ≥ 9, les marqueurs régionaux laissent place aux 92 marqueurs villes individuels — la carte « explose » dans le détail d'un département
+- 🎯 Bouton « Vue France » + 7 boutons départements (13, 33, 38, 59, 62, 69, 77) comme raccourcis de zoom
+- 🧝 92 villes transformées en lieux fantasy (Fontainebleau = capitale des Hauts-Elfes, Marseille = skavens, Lyon = cité impériale, Le Bouscat = vampires bourgeois, Gujan-Mestras = nains huîtriers, Calais = drakéides, etc.)
+- 📜 Panneau « transcript » latéral filtré automatiquement par département visible
+- 🏰 Légende cliquable qui recentre la carte (sur une ville en mode département, sur une région en vue France)
 - 📱 Mise en page responsive
 
 ## Utilisation
@@ -39,20 +41,43 @@ fantasymap/
 
 ## Ajouter ou modifier une ville
 
-Toutes les données vivent dans le tableau `cities` en haut de `script.js` :
+Toutes les données vivent dans l'objet `regions` en haut de `script.js`, keyé par code département. Chaque région contient ses textes (titre, intro), son viewport (`center`, `zoom`) et son tableau `cities` :
 
 ```js
-{
-  name: "Fontainebleau",
-  lat: 48.4010, lng: 2.7017,
-  icon: "🧝",
-  race: "Capitale des Hauts-Elfes",
-  description: "Ça c'est carrément la capitale des hauts-elfes...",
-  population: 15583
-}
+const regions = {
+  "77": {
+    label: "77 — Seine-et-Marne",
+    title: "⚔️ Carte Fantasy du 77 - Seine-et-Marne",
+    h1: "⚔️ Carte Fantasy du 77 ⚔️",
+    headerP: "Seine-et-Marne — « Une terre remplie de contes et légendes »",
+    legendH3: "Peuples du 77",
+    intro: "On va dans le 77...",
+    center: [48.72, 2.72],
+    zoom: 10,
+    cities: [
+      {
+        name: "Fontainebleau",
+        lat: 48.4010, lng: 2.7017,
+        icon: "🧝",
+        race: "Capitale des Hauts-Elfes",
+        description: "Ça c'est carrément la capitale des hauts-elfes...",
+        population: 15583
+      },
+      // ...
+    ]
+  },
+  // … autres départements
+};
 ```
 
-Ajouter une entrée met automatiquement à jour les marqueurs de la carte, la légende et le transcript — tout est généré à partir de ce tableau.
+Ajouter une entrée à un `cities[]` met automatiquement à jour les marqueurs, la légende et le transcript de la région concernée — tout est généré par `buildAllMarkers()` et `renderListPanels()`.
+
+## Ajouter un nouveau département
+
+1. Ajouter une entrée dans `regions` (`script.js`) avec son code, ses textes, son `center` / `zoom` et ses villes.
+2. Ajouter un `<button class="region-btn" data-region="XX">` dans `#region-selector` (`index.html`).
+
+Aucune autre modification nécessaire — `buildAllMarkers()` lit dynamiquement la liste des régions.
 
 ## Technologies
 

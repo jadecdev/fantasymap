@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⚔️ Carte Fantasy du 77 - Seine-et-Marne</title>
+<title>⚔️ Carte Fantasy de France</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -12,9 +12,19 @@
 <body>
 
 <div id="header">
-  <h1>⚔️ Carte Fantasy du 77 ⚔️</h1>
-  <p>Seine-et-Marne — « Une terre remplie de contes et légendes »</p>
-  <p class="credit">Inspiré de <a href="https://www.instagram.com/maxim_penet/reels/" target="_blank" rel="noopener noreferrer">@maxime_penet</a> et de <a href="https://www.instagram.com/reel/DXEIO7stGwS/" target="_blank" rel="noopener noreferrer">sa vidéo Instagram</a></p>
+  <h1>⚔️ Carte Fantasy ⚔️</h1>
+  <p>—</p>
+  <p class="credit">Inspiré des vidéos de <a href="https://www.instagram.com/maxim_penet/reels/" target="_blank" rel="noopener noreferrer">@maxime_penet</a></p>
+  <div id="region-selector">
+    <button class="region-btn region-btn-france" data-region="france">🗺️ Vue France</button>
+    <button class="region-btn" data-region="13">13 — Bouches-du-Rhône</button>
+    <button class="region-btn" data-region="33">33 — Gironde</button>
+    <button class="region-btn" data-region="38">38 — Isère</button>
+    <button class="region-btn" data-region="59">59 — Nord</button>
+    <button class="region-btn" data-region="62">62 — Pas-de-Calais</button>
+    <button class="region-btn" data-region="69">69 — Rhône</button>
+    <button class="region-btn" data-region="77">77 — Seine-et-Marne</button>
+  </div>
 </div>
 
 <div id="map"></div>
