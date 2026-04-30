@@ -958,6 +958,73 @@ function toggleTranscript() {
   document.getElementById('transcript-panel').classList.toggle('open');
 }
 
+// Swipe-right to close the transcript panel (mobile / touch).
+// Locks direction on first few pixels so vertical scrolling stays untouched.
+(function setupTranscriptSwipe() {
+  const panel = document.getElementById('transcript-panel');
+  const SWIPE_CLOSE_THRESHOLD = 80; // px traveled right to commit close
+  const DIRECTION_LOCK_PX = 10;     // px before deciding swipe vs scroll
+
+  let startX = 0, startY = 0, currentDX = 0;
+  let pending = false;  // touch active, direction not yet decided
+  let dragging = false; // actively translating the panel
+
+  panel.addEventListener('touchstart', (e) => {
+    if (!panel.classList.contains('open') || e.touches.length !== 1) return;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    currentDX = 0;
+    pending = true;
+    dragging = false;
+  }, { passive: true });
+
+  panel.addEventListener('touchmove', (e) => {
+    if (!pending && !dragging) return;
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+
+    if (pending) {
+      if (Math.abs(dx) < DIRECTION_LOCK_PX && Math.abs(dy) < DIRECTION_LOCK_PX) return;
+      if (Math.abs(dx) > Math.abs(dy) && dx > 0) {
+        dragging = true;
+        pending = false;
+        panel.style.transition = 'none';
+      } else {
+        pending = false; // vertical scroll or left swipe: let the browser handle it
+        return;
+      }
+    }
+
+    currentDX = Math.max(0, dx);
+    panel.style.transform = `translateX(${currentDX}px)`;
+    e.preventDefault();
+  }, { passive: false });
+
+  function endDrag() {
+    if (!dragging) { pending = false; return; }
+    dragging = false;
+    pending = false;
+
+    if (currentDX > SWIPE_CLOSE_THRESHOLD) {
+      panel.style.transition = 'transform 0.25s ease-out';
+      panel.style.transform = `translateX(${panel.offsetWidth}px)`;
+      setTimeout(() => {
+        panel.classList.remove('open');
+        panel.style.transition = '';
+        panel.style.transform = '';
+      }, 250);
+    } else {
+      panel.style.transition = 'transform 0.2s ease-out';
+      panel.style.transform = '';
+      setTimeout(() => { panel.style.transition = ''; }, 200);
+    }
+    currentDX = 0;
+  }
+
+  panel.addEventListener('touchend', endDrag, { passive: true });
+  panel.addEventListener('touchcancel', endDrag, { passive: true });
+})();
+
 // Fix: prevent Leaflet popup close button from causing page navigation.
 // Registered once at boot.
 map.on('popupopen', function() {
