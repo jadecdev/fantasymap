@@ -75,7 +75,7 @@ Ajouter une entrée à un `cities[]` met automatiquement à jour les marqueurs, 
 ## Ajouter un nouveau département
 
 1. Ajouter une entrée dans `regions` (`script.js`) avec son code, ses textes, son `center` / `zoom` et ses villes.
-2. Ajouter un `<button class="region-btn" data-region="XX">` dans `#region-selector` (`index.html`).
+2. Ajouter un `<button class="region-dropdown-item" data-region="XX" role="option">` dans `.region-dropdown-menu` (`index.html`).
 
 Aucune autre modification nécessaire — `buildAllMarkers()` lit dynamiquement la liste des régions.
 
