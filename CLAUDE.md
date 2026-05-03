@@ -24,9 +24,9 @@ Three files, each with a single responsibility:
 
 ### Data and rendering
 
-- **Data source of truth**: the `regions` object at the top of `script.js`, keyed by department code (`"13"`, `"33"`, `"38"`, `"59"`, `"62"`, `"69"`, `"77"`). Each region carries its own header text (`title`, `h1`, `headerP`, `legendH3`, `intro`), its viewport (`center`, `zoom`), and a `cities[]` array. Each city entry has `name`, `lat`, `lng`, `icon` (emoji), `race` (fantasy label), `description` (in-character French blurb), `population`.
+- **Data source of truth**: the `regions` object at the top of `script.js`, keyed by department code (`"13"`, `"33"`, `"38"`, `"59"`, `"62"`, `"69"`, `"73"`, `"74"`, `"77"`). Each region carries its own header text (`title`, `h1`, `headerP`, `legendH3`, `intro`), its viewport (`center`, `zoom`), and a `cities[]` array. Each city entry has `name`, `lat`, `lng`, `icon` (emoji), `race` (fantasy label), `description` (in-character French blurb), `population`.
 - **Two-tier marker model**:
-  - At boot, `buildAllMarkers()` builds 7 **region markers** (one per department, displayed at `region.center`, big circular badge with the dept code) and 109 **city markers** (one per `region.cities[]` entry). They live in two `L.layerGroup`s: `regionLayer` and `cityLayer`.
+  - At boot, `buildAllMarkers()` builds 9 **region markers** (one per department, displayed at `region.center`, big circular badge with the dept code) and 123 **city markers** (one per `region.cities[]` entry). They live in two `L.layerGroup`s: `regionLayer` and `cityLayer`.
   - `updateMarkerLayers()` listens to `zoomend` and swaps the active layer based on `ZOOM_THRESHOLD = 9`: zoom < 9 → region markers, zoom ≥ 9 → city markers.
   - Click on a region marker = `map.flyTo(region.center, region.zoom)` (zooms past threshold → expansion).
 - **Dominant region detection**: `computeDominantRegion()` returns `null` when zoom < 9 (Vue France), otherwise the dept whose `region.center` is euclidean-closest to `map.getCenter()`. Recomputed on every `moveend`.

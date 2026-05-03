@@ -8,10 +8,10 @@ Une carte interactive de départements français réimaginés en univers fantasy
 
 ## Aperçu
 
-- 🗺️ Vue France au démarrage : 7 marqueurs régionaux (un par département) sur la carte de France
-- 🔍 Au zoom ≥ 9, les marqueurs régionaux laissent place aux 92 marqueurs villes individuels — la carte « explose » dans le détail d'un département
-- 🎯 Bouton « Vue France » + 7 boutons départements (13, 33, 38, 59, 62, 69, 77) comme raccourcis de zoom
-- 🧝 92 villes transformées en lieux fantasy (Fontainebleau = capitale des Hauts-Elfes, Marseille = skavens, Lyon = cité impériale, Le Bouscat = vampires bourgeois, Gujan-Mestras = nains huîtriers, Calais = drakéides, etc.)
+- 🗺️ Vue France au démarrage : 9 marqueurs régionaux (un par département) sur la carte de France
+- 🔍 Au zoom ≥ 9, les marqueurs régionaux laissent place aux 123 marqueurs villes individuels — la carte « explose » dans le détail d'un département
+- 🎯 Bouton « Vue France » + 9 boutons départements (13, 33, 38, 59, 62, 69, 73, 74, 77) comme raccourcis de zoom
+- 🧝 123 villes transformées en lieux fantasy (Fontainebleau = capitale des Hauts-Elfes, Marseille = skavens, Lyon = cité impériale, Le Bouscat = vampires bourgeois, Gujan-Mestras = nains huîtriers, Calais = drakéides, Annecy = satyres, etc.)
 - 📜 Panneau « transcript » latéral filtré automatiquement par département visible
 - 🏰 Légende cliquable qui recentre la carte (sur une ville en mode département, sur une région en vue France)
 - 📱 Mise en page responsive
