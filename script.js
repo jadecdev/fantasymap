@@ -216,6 +216,125 @@ const regions = {
         icon: "🦇", race: "Vampires bourgeois",
         description: "Le Bouscat c'est des vampires bourgeois. Tout en lin, très polis, ils te sucent ton or directement dans la poche avant que t'aies le temps de t'en rendre compte.",
         population: 24000
+      },
+      {
+        name: "Andernos-les-Bains",
+        lat: 44.7406, lng: -1.1042,
+        icon: "🔱", race: "Royaume des tritons",
+        description: "Andernos-les-Bains c'est le royaume des tritons. Ils sortent jamais de l'eau, sauf pour piller les voyageurs sur la côte. Si tu vois une tête sortir des vagues, planque-toi vite fait.",
+        population: 12000
+      },
+      {
+        name: "Biganos",
+        lat: 44.6433, lng: -0.9764,
+        icon: "👿", race: "Démons malodorants",
+        description: "Biganos c'est des démons qui ont maudit la zone et qui ont répandu pour l'éternité une puanteur insupportable. Je te le recommande pas, fais le tour.",
+        population: 11000
+      },
+      {
+        name: "Saint-André-de-Cubzac",
+        lat: 45.0167, lng: -0.4500,
+        icon: "🧙", race: "Gnomes (aussi)",
+        description: "Saint-André-de-Cubzac c'est aussi des gnomes, comme Cénon. Pas trop hostiles non plus, mais bon — un gnome reste un gnome, garde ta bourse à l'œil.",
+        population: 11000
+      },
+      {
+        name: "Bordeaux",
+        lat: 44.8378, lng: -0.5792,
+        icon: "🍷", race: "Seigneurs de la Vigne de Sang",
+        description: "Bordeaux c'est la grande cité humaine, dirigée par les Seigneurs de la Vigne de Sang. Une noblesse de vampires qui t'oblige à boire leur nectar au prix de ton âme. Pas cher payé, qu'ils disent.",
+        population: 260000
+      },
+      {
+        name: "Blanquefort",
+        lat: 44.9114, lng: -0.6325,
+        icon: "⚒️", race: "Forgerons déchus",
+        description: "Blanquefort c'est le bastion des forgerons déchus. Des nains nostalgiques qui errent dans les ruelles en repensant au passé glorieux de leurs forges. Plus une enclume qui sonne dans toute la ville.",
+        population: 16000
+      },
+      {
+        name: "Ambarès-et-Lagrave",
+        lat: 44.9214, lng: -0.4639,
+        icon: "🦎", race: "Hommes-lézards des marais",
+        description: "Ambarès-et-Lagrave c'est le marais. Une zone toxique remplie d'hommes-lézards et de guenaudes qui se planquent dans les brumes chimiques. Respire pas trop fort en traversant.",
+        population: 16500
+      },
+      {
+        name: "Pessac",
+        lat: 44.8067, lng: -0.6311,
+        icon: "🍾", race: "Académie Alcoolique",
+        description: "Pessac c'est l'Académie Alcoolique. Des milliers d'apprentis mages qui passent leurs journées à essayer de transformer le mana en pinard. Ça rate plus souvent que ça marche, mais ils y croient dur.",
+        population: 64000
+      },
+      {
+        name: "Villenave-d'Ornon",
+        lat: 44.7778, lng: -0.5611,
+        icon: "🎩", race: "Repaire des charlatans",
+        description: "Villenave-d'Ornon c'est le repaire des charlatans. Des escrocs de haut niveau qui ont érigé un donjon entier pour piéger les voyageurs. Si on te propose un raccourci dans le coin, refuse poliment.",
+        population: 38000
+      },
+      {
+        name: "Bègles",
+        lat: 44.8083, lng: -0.5469,
+        icon: "🪓", race: "Barbares fiers",
+        description: "Bègles c'est un village de barbares fiers. Ils règlent chaque conflit diplomatique par une mêlée générale, et de l'autorité locale, ils en ont rien à faire.",
+        population: 28500
+      },
+      {
+        name: "Talence",
+        lat: 44.8050, lng: -0.5897,
+        icon: "📜", race: "Enclave des scribes",
+        description: "Talence c'est l'enclave des scribes. Si t'as pas un grimoire prestigieux et un CV en cuir de dragon sous le bras, tu passes même pas la porte. Bannissement direct.",
+        population: 43000
+      },
+      {
+        name: "Saint-Loubès",
+        lat: 44.9181, lng: -0.4292,
+        icon: "🕊️", race: "Zone Neutre",
+        description: "Saint-Loubès c'est la Zone Neutre. Le PvP y est désactivé, c'est très calme, c'est là-bas que tu vas pour sauvegarder ta partie tranquille.",
+        population: 9000
+      },
+      {
+        name: "Le Teich",
+        lat: 44.6314, lng: -1.0250,
+        icon: "🪶", race: "Nid des Harpies",
+        description: "Le Teich c'est le nid des Harpies. Des créatures ailées qui protègent la réserve sauvage du bassin. Surtout, regarde pas leurs nids si tu tiens à tes yeux.",
+        population: 8000
+      },
+      {
+        name: "Salleboeuf",
+        lat: 44.8442, lng: -0.4203,
+        icon: "🐺", race: "Meute de gnolls",
+        description: "Salleboeuf c'est une des cinq meutes de gnolls qui se disputent l'Entre-deux-Mers. Ils marquent leur territoire, ils hurlent la nuit, et toutes les semaines une nouvelle bataille éclate avec leurs voisins de Sainte-Eulalie.",
+        population: 2200
+      },
+      {
+        name: "Sainte-Eulalie",
+        lat: 44.8997, lng: -0.4781,
+        icon: "🐺", race: "Meute de gnolls",
+        description: "Sainte-Eulalie, deuxième meute de gnolls de l'Entre-deux-Mers. Plus organisée que les autres, ils ont même une hiérarchie — un alpha, des bêtas, et tout en bas les mecs qui se battent pour les restes.",
+        population: 5000
+      },
+      {
+        name: "Sadirac",
+        lat: 44.8175, lng: -0.3489,
+        icon: "🐺", race: "Meute de gnolls",
+        description: "Sadirac, troisième meute de gnolls. Les plus discrets du lot, ils sortent surtout la nuit pour piller les caravanes qui traversent l'Entre-deux-Mers.",
+        population: 3800
+      },
+      {
+        name: "Yvrac",
+        lat: 44.8800, lng: -0.4839,
+        icon: "🐺", race: "Meute de gnolls",
+        description: "Yvrac, quatrième meute de gnolls. Petits mais teigneux, ils défendent leurs vignes comme si c'était de l'or — d'ailleurs, dans le coin, ça l'est un peu.",
+        population: 3000
+      },
+      {
+        name: "Montussan",
+        lat: 44.8856, lng: -0.4456,
+        icon: "🐺", race: "Meute de gnolls",
+        description: "Montussan, cinquième et dernière meute de gnolls. Coincés entre les quatre autres, ils survivent à coups d'alliances bancales qui tiennent jamais plus d'une saison.",
+        population: 3500
       }
     ]
   },
