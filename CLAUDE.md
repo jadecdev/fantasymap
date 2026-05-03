@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A single-page interactive fantasy-themed map of French departments. Currently covers seven departments — 13 (Bouches-du-Rhône), 33 (Gironde), 38 (Isère), 59 (Nord), 62 (Pas-de-Calais), 69 (Rhône), 77 (Seine-et-Marne) — for a total of 109 cities. The map opens in a France-wide view with one marker per department; zooming past threshold 9 swaps in that department's individual city markers. Each commune is reimagined as a fantasy location (elves, dwarves, trolls, hobbits, vampires bourgeois, skavens marseillais, drakéides calaisiens, etc.) with a short in-character French description. UI text is in French. Processed source videos live in `sources/done/`; videos still to integrate land directly in `sources/`.
+A single-page interactive fantasy-themed map of French departments. Currently covers nine departments — 13 (Bouches-du-Rhône), 33 (Gironde), 38 (Isère), 59 (Nord), 62 (Pas-de-Calais), 69 (Rhône), 73 (Savoie), 74 (Haute-Savoie), 77 (Seine-et-Marne) — for a total of 123 cities. The map opens in a France-wide view with one marker per department; zooming past threshold 9 swaps in that department's individual city markers. Each commune is reimagined as a fantasy location (elves, dwarves, trolls, hobbits, vampires bourgeois, skavens marseillais, drakéides calaisiens, etc.) with a short in-character French description. UI text is in French. Processed source videos live in `sources/done/`; videos still to integrate land directly in `sources/`.
 
 The project is split into three files: `index.html` (markup), `styles.css` (styles), `script.js` (data + behavior).
 
@@ -30,8 +30,8 @@ Three files, each with a single responsibility:
   - `updateMarkerLayers()` listens to `zoomend` and swaps the active layer based on `ZOOM_THRESHOLD = 9`: zoom < 9 → region markers, zoom ≥ 9 → city markers.
   - Click on a region marker = `map.flyTo(region.center, region.zoom)` (zooms past threshold → expansion).
 - **Dominant region detection**: `computeDominantRegion()` returns `null` when zoom < 9 (Vue France), otherwise the dept whose `region.center` is euclidean-closest to `map.getCenter()`. Recomputed on every `moveend`.
-- **`renderListPanels(domKey)`**: rebuilds legend + transcript + header texts based on the dominant region. `domKey === null` → "Régions de France" with 7 region rows. `domKey === "33"` → "Peuples du 33" with 30 city rows. Called only when `currentDominant` actually changes (guard against pan spam).
-- **Selector**: 8 `.region-btn` buttons. `data-region="france"` calls `flyToBounds(FRANCE_BOUNDS)`. Department buttons call `flyTo(region.center, region.zoom)`. The `.active` class is set by `renderListPanels` based on the current dominant region — never persisted.
+- **`renderListPanels(domKey)`**: rebuilds legend + transcript + header texts based on the dominant region. `domKey === null` → "Régions de France" with 9 region rows. `domKey === "33"` → "Peuples du 33" with 30 city rows. Called only when `currentDominant` actually changes (guard against pan spam).
+- **Selector**: 10 `.region-btn` buttons. `data-region="france"` calls `flyToBounds(FRANCE_BOUNDS)`. Department buttons call `flyTo(region.center, region.zoom)`. The `.active` class is set by `renderListPanels` based on the current dominant region — never persisted.
 - **No persistence**: every reload starts in Vue France via `map.fitBounds(FRANCE_BOUNDS)`.
 - **Map**: Leaflet 1.9.4, OpenStreetMap tiles, styled via a CSS filter on `.leaflet-tile-pane` to give the dark/sepia fantasy look (there is no separate tile provider).
 - **Markers**: `L.divIcon` for both tiers. City markers use `.fantasy-marker` / `.marker-icon`; region markers use `.region-marker` / `.region-icon` (bigger circle with the dept code in Cinzel).
