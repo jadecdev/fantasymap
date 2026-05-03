@@ -845,6 +845,128 @@ const regions = {
         population: 522000
       }
     ]
+  },
+  "73": {
+    label: "73 — Savoie",
+    title: "⚔️ Carte Fantasy du 73 - Savoie",
+    h1: "⚔️ Carte Fantasy du 73 ⚔️",
+    headerP: "Savoie — « Entre cimes enneigées, thermes anciens et arènes oubliées »",
+    legendH3: "Peuples du 73",
+    intro: "On part en Savoie, une terre de hautes vallées et de stations thermales où les hauts-elfes flottent et les hobbits gravissent les sommets.",
+    center: [45.62, 6.30],
+    zoom: 9,
+    cities: [
+      {
+        name: "Albertville",
+        lat: 45.6757, lng: 6.3920,
+        icon: "⚔️", race: "Arènes des gladiateurs",
+        description: "Albertville c'est une ville d'arènes gladiatoriales. Ils continuent de s'entraîner pour des combats qui n'auront jamais lieu.",
+        population: 19193
+      },
+      {
+        name: "Aix-les-Bains",
+        lat: 45.6886, lng: 5.9152,
+        icon: "🧝", race: "Sanctuaire des Hauts-Elfes",
+        description: "Aix-les-Bains c'est un sanctuaire de hauts-elfes. Ils sont riches, méprisants, et passent leur temps à flotter dans l'eau.",
+        population: 30500
+      },
+      {
+        name: "La Motte-Servolex",
+        lat: 45.5853, lng: 5.8867,
+        icon: "🌿", race: "Golems de boue et de racines",
+        description: "La Motte-Servolex c'est plus des humains, mais des blocs de boue et de racines qui protègent férocement leur territoire.",
+        population: 13000
+      },
+      {
+        name: "Chambéry",
+        lat: 45.5667, lng: 5.9167,
+        icon: "🐘", race: "Guilde Administrative",
+        description: "Chambéry c'est les humains de la Guilde Administrative. Ils ont réussi l'exploit de bloquer toute une ville avec quatre éléphants de pierre.",
+        population: 59000
+      },
+      {
+        name: "Bourg-Saint-Maurice",
+        lat: 45.6181, lng: 6.7700,
+        icon: "⛰️", race: "Hobbits des Sommets",
+        description: "Bourg-Saint-Maurice c'est les Hobbits des Sommets. C'est la colonie de hobbits la plus haute de France.",
+        population: 7700
+      },
+      {
+        name: "Challes-les-Eaux",
+        lat: 45.5489, lng: 5.9756,
+        icon: "🌊", race: "Noyeurs",
+        description: "Challes-les-Eaux c'est des Noyeurs, comme dans The Witcher. Ils attendent patiemment que tu t'approches de la vase pour t'aspirer définitivement.",
+        population: 5500
+      }
+    ]
+  },
+  "74": {
+    label: "74 — Haute-Savoie",
+    title: "⚔️ Carte Fantasy du 74 - Haute-Savoie",
+    h1: "⚔️ Carte Fantasy du 74 ⚔️",
+    headerP: "Haute-Savoie — « Entre lacs glaciaires, frontières gardées et chantiers maudits »",
+    legendH3: "Peuples du 74",
+    intro: "On monte dans le 74, une terre de lacs profonds et de cimes neigeuses où les satyres font la fête et les arachnides gardent la frontière.",
+    center: [46.10, 6.30],
+    zoom: 9,
+    cities: [
+      {
+        name: "La Roche-sur-Foron",
+        lat: 46.0667, lng: 6.3167,
+        icon: "⛏️", race: "Nains du granit",
+        description: "La Roche-sur-Foron c'est des nains bien bourrins. Ils se nourrissent de granit et creusent d'immenses galeries pour rien y trouver.",
+        population: 12000
+      },
+      {
+        name: "Sallanches",
+        lat: 45.9356, lng: 6.6322,
+        icon: "🕷️", race: "Nid des Arachnides",
+        description: "Sallanches c'est le nid des Arachnides. Une ville de créatures à huit pattes qui tissent des toiles pour t'empêcher de passer la frontière.",
+        population: 16400
+      },
+      {
+        name: "Bonneville",
+        lat: 46.0789, lng: 6.4078,
+        icon: "🪖", race: "Humains ultra-hostiles",
+        description: "Bonneville c'est une population classique, mais ultra-hostile. Ils détestent cordialement tous les autres peuples.",
+        population: 13200
+      },
+      {
+        name: "Annecy",
+        lat: 45.8992, lng: 6.1294,
+        icon: "🐐", race: "Domaine des Satyres",
+        description: "Annecy c'est le domaine des Satyres. Ils passent leur vie à faire la fête au bord du lac, à jouer de la flûte et à danser jusqu'à l'aube — ils savent recevoir.",
+        population: 131000
+      },
+      {
+        name: "Annemasse",
+        lat: 46.1958, lng: 6.2358,
+        icon: "🚧", race: "Cité maudite en chantier",
+        description: "Annemasse c'est une ville maudite, condamnée à être en construction permanente. Les murs s'écroulent dès qu'ils sont finis, ils sont condamnés au chaos.",
+        population: 36500
+      },
+      {
+        name: "Thonon-les-Bains",
+        lat: 46.3725, lng: 6.4790,
+        icon: "🧜", race: "Elfes Lacustres",
+        description: "Thonon-les-Bains c'est les Elfes Lacustres. Des êtres aquatiques qui ne sortent de l'eau que pour juger la pureté du lac.",
+        population: 36000
+      },
+      {
+        name: "Rumilly",
+        lat: 45.8639, lng: 5.9469,
+        icon: "👺", race: "Bastion des Gobelins",
+        description: "Rumilly c'est le bastion des Gobelins. Une ville chaotique et bruyante où on fabrique des objets en métal qui tirent.",
+        population: 16400
+      },
+      {
+        name: "Gaillard",
+        lat: 46.1839, lng: 6.2017,
+        icon: "🪓", race: "Camp des Barbares",
+        description: "Gaillard, ça sonne camp des barbares. Un territoire sauvage de guerriers sans foi ni loi.",
+        population: 12000
+      }
+    ]
   }
 };
 
@@ -864,7 +986,7 @@ const headerP = document.querySelector('#header > p');
 const legendH3 = legendEl.querySelector('h3');
 
 const ZOOM_THRESHOLD = 9;
-const FRANCE_BOUNDS = L.latLngBounds([[43.0, -1.5], [51.5, 6.5]]);
+const FRANCE_BOUNDS = L.latLngBounds([[43.0, -1.5], [51.5, 7.0]]);
 
 const cityMarkers = [];
 const regionMarkers = [];
