@@ -1192,7 +1192,14 @@ function syncFromMap() {
     currentDominant = newDom;
     renderListPanels(newDom);
     updateHashFromDominant(newDom);
+    trackRegion(newDom);
   }
+}
+
+function trackRegion(domKey) {
+  if (typeof window.goatcounter === 'undefined' || !window.goatcounter.count) return;
+  const path = domKey === null ? '/region/france' : '/region/' + domKey;
+  window.goatcounter.count({ path, event: true });
 }
 
 // URL hash sync: `#33` for Gironde, no hash for Vue France.
