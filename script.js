@@ -967,6 +967,116 @@ const regions = {
         population: 12000
       }
     ]
+  },
+  "78": {
+    label: "78 — Yvelines",
+    title: "⚔️ Carte Fantasy du 78 - Yvelines",
+    h1: "⚔️ Carte Fantasy du 78 ⚔️",
+    headerP: "Yvelines — « Forêts royales, palais et alchimistes qu'ont pété les plombs »",
+    legendH3: "Peuples du 78",
+    intro: "On va dans le 78, le département des forêts royales, des palais à briques rouges et de quelques alchimistes qui ont franchement trop expérimenté.",
+    center: [48.82, 1.90],
+    zoom: 9,
+    cities: [
+      {
+        name: "Sartrouville",
+        lat: 48.9381, lng: 2.1632,
+        icon: "⚙️", race: "Gnomes belliqueux",
+        description: "C'est forcément une ville de gnomes avec un nom pareil, des gnomes belliqueux capables de démonter ton véhicule en 45 secondes pour t'en revendre les pièces.",
+        population: 53104
+      },
+      {
+        name: "Voisins-le-Bretonneux",
+        lat: 48.7625, lng: 2.0467,
+        icon: "🌿", race: "Marais des Limons",
+        description: "C'est le marais des limons tout simplement. Beaucoup de loots enfouis là-dedans, mais faut vraiment avoir envie d'aller tremper tes bottes.",
+        population: 12274
+      },
+      {
+        name: "Chanteloup-les-Vignes",
+        lat: 48.9758, lng: 1.9806,
+        icon: "🍇", race: "Druides festoyeurs",
+        description: "C'est des druides qui peuvent se transformer, mais ils passent trop de temps à faire des banquets pour se métamorphoser en quoi que ce soit d'utile.",
+        population: 10333
+      },
+      {
+        name: "Carrières-sur-Seine",
+        lat: 48.9075, lng: 2.1894,
+        icon: "🪨", race: "Golems & Lithomanciens",
+        description: "Rempli de golems et de lithomanciens, des gens qui lisent l'avenir dans les pierres. C'est particulier comme ambiance, mais tu repars toujours avec ton thème astral minéral.",
+        population: 16187
+      },
+      {
+        name: "Fontenay-le-Fleury",
+        lat: 48.8133, lng: 2.0469,
+        icon: "🧝", race: "Elfes des Bois",
+        description: "Des elfes des bois sans aucun doute, chargés de protéger les eaux royales sacrées. Si t'approches de la rivière sans révérence, t'as une flèche dans le mollet.",
+        population: 13234
+      },
+      {
+        name: "Montigny-le-Bretonneux",
+        lat: 48.7686, lng: 2.0306,
+        icon: "⚗️", race: "Alchimistes fous",
+        description: "Ça c'est des alchimistes qui ont pété les plombs et qui ont construit n'importe quoi. C'est pas une ville, c'est une expérience à ciel ouvert.",
+        population: 33598
+      },
+      {
+        name: "Plaisir",
+        lat: 48.8186, lng: 1.9456,
+        icon: "🍃", race: "Hobbits marchands",
+        description: "Y a que des hobbits pour habiter dans une ville avec un nom pareil. Des bons hobbits marchands qui vivent bien confortablement, le garde-manger toujours plein.",
+        population: 31368
+      },
+      {
+        name: "Le Chesnay-Rocquencourt",
+        lat: 48.8228, lng: 2.1233,
+        icon: "🛡️", race: "Chevaliers de la Garde",
+        description: "Ce sont les chevaliers de la garde rapprochée. Ils sont vêtus d'armures réfléchissantes pour renvoyer la lumière divine du palais voisin.",
+        population: 28809
+      },
+      {
+        name: "Chatou",
+        lat: 48.8889, lng: 2.1572,
+        icon: "🌊", race: "Peuple des Ondins",
+        description: "Le peuple des ondins. Ils sont pas agressifs du tout, sauf si t'as le malheur de critiquer leur art — là c'est tempête sous l'eau.",
+        population: 30364
+      },
+      {
+        name: "Villepreux",
+        lat: 48.8311, lng: 1.9925,
+        icon: "🧪", race: "Distillateurs alchimistes",
+        description: "C'est aussi des alchimistes. Ils distillent un alcool de poire qui, selon la dose, peut soit te donner une force de géant pendant 5 minutes, soit te transformer en arbuste.",
+        population: 11816
+      },
+      {
+        name: "Rambouillet",
+        lat: 48.6447, lng: 1.8311,
+        icon: "🐴", race: "Centaures gardiens",
+        description: "C'est les centaures chargés de protéger la forêt, ça tout le monde le sait. Va surtout pas faire tes besoins contre un arbre là-bas, on t'a prévenu.",
+        population: 26749
+      },
+      {
+        name: "Maurepas",
+        lat: 48.7625, lng: 1.9192,
+        icon: "🐀", race: "Skavens de la Colline",
+        description: "C'est les Skavens de la Colline, des hommes-rats qui font de la récupération. Leur chef est planqué dans le donjon et il sort jamais.",
+        population: 19284
+      },
+      {
+        name: "Mantes-la-Jolie",
+        lat: 48.9897, lng: 1.7167,
+        icon: "📚", race: "Cité des Érudits",
+        description: "C'est la cité des érudits. Ils protègent toute la région contre le chaos qui monte de l'ouest, à coups de grimoires et de formules bien senties.",
+        population: 44032
+      },
+      {
+        name: "Houdan",
+        lat: 48.7944, lng: 1.6017,
+        icon: "🐔", race: "Éleveurs de poules de combat",
+        description: "C'est des humains qui élèvent des poules de combat. Ils utilisent ces gallinacés géants comme montures légères — c'est moins prestigieux qu'un destrier, mais ça pond des œufs.",
+        population: 3373
+      }
+    ]
   }
 };
 
