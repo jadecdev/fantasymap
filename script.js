@@ -722,6 +722,116 @@ const regions = {
       }
     ]
   },
+  "67": {
+    label: "67 — Bas-Rhin",
+    title: "⚔️ Carte Fantasy du 67 - Bas-Rhin",
+    h1: "⚔️ Carte Fantasy du 67 ⚔️",
+    headerP: "Bas-Rhin — « Le Grand Bastion de l'Est, des druides au cru et des orcs dans la forêt »",
+    legendH3: "Peuples du 67",
+    intro: "On va dans le 67, la grande marche fantasy de l'Est. Tu y trouves le Grand Bastion qui retient les invasions d'orcs, des nains brasseurs, des druides amateurs de grands crus, et même des vampires planqués dans les marais.",
+    center: [48.60, 7.60],
+    zoom: 9,
+    cities: [
+      {
+        name: "Sélestat",
+        lat: 48.2604, lng: 7.4546,
+        icon: "📚", race: "Haut-Elfes érudits",
+        description: "Ça c'est des Hauts-Elfes qui se prennent pour l'élite intellectuelle. Leur bibliothèque déborde de parchemins millénaires, et ils te regardent de haut tant que t'as pas lu trois grimoires de leur main.",
+        population: 19367
+      },
+      {
+        name: "Obernai",
+        lat: 48.4615, lng: 7.4814,
+        icon: "🦅", race: "Druides du grand cru",
+        description: "C'est des druides, leur forme animale c'est l'aigle, et ils rechargent leur mana au grand cru. Pas étonnant que la métamorphose tienne pas toujours debout en fin de soirée.",
+        population: 12067
+      },
+      {
+        name: "Saverne",
+        lat: 48.7414, lng: 7.3625,
+        icon: "🗿", race: "Goliaths des montagnes",
+        description: "C'est des Goliaths, un peuple des montagnes — des demi-géants à la peau de pierre. T'as intérêt à payer ton droit de passage si tu veux pas finir aplati dans le col.",
+        population: 11247
+      },
+      {
+        name: "Bischwiller",
+        lat: 48.7625, lng: 7.8567,
+        icon: "🧵", race: "Mages tisserands",
+        description: "C'est des mages tisserands. Ils cousent des capes d'invisibilité, des bannières de guerre et des armures de soie enchantées — tout le matos magique du département sort de leurs métiers.",
+        population: 12769
+      },
+      {
+        name: "Brumath",
+        lat: 48.7333, lng: 7.7156,
+        icon: "💀", race: "Squelettes antiques",
+        description: "À force de fouiller le sol pour l'archéologie, ils ont réveillé une armée de squelettes antiques. Aujourd'hui c'est plus une ville, c'est une nécropole à ciel ouvert.",
+        population: 10387
+      },
+      {
+        name: "Ostwald",
+        lat: 48.5431, lng: 7.7044,
+        icon: "🦇", race: "Vampires des marais",
+        description: "C'est des vampires des marais, mais pas dangereux pour deux sous : ils se nourrissent que de sang de batraciens. Ils te font plus pitié qu'autre chose.",
+        population: 13107
+      },
+      {
+        name: "Illkirch-Graffenstaden",
+        lat: 48.5253, lng: 7.7158,
+        icon: "👺", race: "Gobelins forgerons",
+        description: "Un nom pareil, ça peut être que des gobelins. Ça bricole dans la tôle et la vapeur, c'est bruyant, ça sent le soufre et ils sont tous recouverts de suie.",
+        population: 27022
+      },
+      {
+        name: "Schiltigheim",
+        lat: 48.6075, lng: 7.7500,
+        icon: "🍺", race: "Nains brasseurs",
+        description: "C'est une ville de nains brasseurs. Plus ils sont alcoolisés, plus ils sont puissants, et ils se battent avec des chopes en métal — autant te dire que la bagarre dure toute la nuit.",
+        population: 33538
+      },
+      {
+        name: "Haguenau",
+        lat: 48.8147, lng: 7.7867,
+        icon: "🐺", race: "Orcs chevaucheurs de Wargs",
+        description: "C'est le domaine des orcs chevaucheurs de Wargs, le poste avancé de toute leur horde. La forêt c'est une zone de non-droit, même les paladins du nord osent pas s'y aventurer.",
+        population: 35008
+      },
+      {
+        name: "Wissembourg",
+        lat: 49.0381, lng: 7.9444,
+        icon: "⚜️", race: "Paladins blancs",
+        description: "C'est l'ordre des paladins blancs qui protègent la frontière nord. Merci à eux, sans eux les orcs auraient déjà tout débordé jusqu'à Strasbourg.",
+        population: 7749
+      },
+      {
+        name: "Sarre-Union",
+        lat: 48.9433, lng: 7.0394,
+        icon: "✊", race: "Hobbits syndicalistes",
+        description: "C'est des hobbits qui vivent dans les collines, et ils sont tous syndicalistes. Ils font grève si on oublie le petit déjeuner, et ils ont déjà gagné les six repas par jour.",
+        population: 2800
+      },
+      {
+        name: "Erstein",
+        lat: 48.4214, lng: 7.6700,
+        icon: "🍬", race: "Alchimistes du sucre",
+        description: "C'est des alchimistes du sucre. Leurs potions de soin marchent très bien, mais elles te donnent le diabète au passage — un vrai enfer pour les aventuriers en campagne.",
+        population: 11272
+      },
+      {
+        name: "Molsheim",
+        lat: 48.5400, lng: 7.4925,
+        icon: "⚙️", race: "Gnomes mécaniciens",
+        description: "C'est des gnomes qui essaient de bricoler des véhicules. Ça explose à chaque tentative, mais peut-être qu'un jour ils y arriveront, on sait pas ;)",
+        population: 9346
+      },
+      {
+        name: "Strasbourg",
+        lat: 48.5734, lng: 7.7521,
+        icon: "🏰", race: "Grand Bastion de l'Est",
+        description: "Le Grand Bastion de l'Est. C'est le dernier rempart de la civilisation, construit pour retenir les invasions massives d'orcs et toutes les autres menaces venues des grandes terres sauvages.",
+        population: 287228
+      }
+    ]
+  },
   "69": {
     label: "69 — Rhône",
     title: "⚔️ Carte Fantasy du 69 - Rhône",
@@ -1096,7 +1206,7 @@ const headerP = document.querySelector('#header > p');
 const legendH3 = legendEl.querySelector('h3');
 
 const ZOOM_THRESHOLD = 9;
-const FRANCE_BOUNDS = L.latLngBounds([[43.0, -1.5], [51.5, 7.0]]);
+const FRANCE_BOUNDS = L.latLngBounds([[43.0, -1.5], [51.5, 8.3]]);
 
 const cityMarkers = [];
 const regionMarkers = [];

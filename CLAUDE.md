@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A single-page interactive fantasy-themed map of French departments. Currently covers ten departments — 13 (Bouches-du-Rhône), 33 (Gironde), 38 (Isère), 59 (Nord), 62 (Pas-de-Calais), 69 (Rhône), 73 (Savoie), 74 (Haute-Savoie), 77 (Seine-et-Marne), 78 (Yvelines) — for a total of 137 cities. The map opens in a France-wide view with one marker per department; zooming past threshold 9 swaps in that department's individual city markers. Each commune is reimagined as a fantasy location (elves, dwarves, trolls, hobbits, vampires bourgeois, skavens marseillais, drakéides calaisiens, etc.) with a short in-character French description. UI text is in French. Processed source videos live in `sources/done/`; videos still to integrate land directly in `sources/`.
+A single-page interactive fantasy-themed map of French departments. Currently covers eleven departments — 13 (Bouches-du-Rhône), 33 (Gironde), 38 (Isère), 59 (Nord), 62 (Pas-de-Calais), 67 (Bas-Rhin), 69 (Rhône), 73 (Savoie), 74 (Haute-Savoie), 77 (Seine-et-Marne), 78 (Yvelines) — for a total of 151 cities. The map opens in a France-wide view with one marker per department; zooming past threshold 9 swaps in that department's individual city markers. Each commune is reimagined as a fantasy location (elves, dwarves, trolls, hobbits, vampires bourgeois, skavens marseillais, drakéides calaisiens, etc.) with a short in-character French description. UI text is in French. Processed source videos live in `sources/done/`; videos still to integrate land directly in `sources/`.
 
 The project is split into three files: `index.html` (markup), `styles.css` (styles), `script.js` (data + behavior).
 
