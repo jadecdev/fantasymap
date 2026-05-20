@@ -1185,6 +1185,111 @@ const regions = {
         icon: "🐔", race: "Éleveurs de poules de combat",
         description: "C'est des humains qui élèvent des poules de combat. Ils utilisent ces gallinacés géants comme montures légères — c'est moins prestigieux qu'un destrier, mais ça pond des œufs.",
         population: 3373
+      },
+      {
+        name: "Saint-Germain-en-Laye",
+        lat: 48.8983, lng: 2.0941,
+        icon: "🌳", race: "Elfes des bois snobs",
+        description: "C'est des elfes des bois qui se prennent pour des hauts elfes, ça se veut snob mais ça vit dans la forêt comme tout le monde. T'as beau leur dire, ils écoutent rien.",
+        population: 45923
+      },
+      {
+        name: "Poissy",
+        lat: 48.9286, lng: 2.0381,
+        icon: "💥", race: "Nains artificiers",
+        description: "Nains artificiers, ils manipulent les cocktails explosifs comme personne. Tu leur demandes un verre, tu repars avec une grenade pétillante dans la main.",
+        population: 38046
+      },
+      {
+        name: "Conflans-Sainte-Honorine",
+        lat: 48.9989, lng: 2.0989,
+        icon: "🐟", race: "Murlocs des fleuves",
+        description: "C'est des murlocs ça, si t'entends ce bruit, tu cours. Ils sortent de l'eau en groupe et c'est terminé pour ton équipement.",
+        population: 36500
+      },
+      {
+        name: "Trappes",
+        lat: 48.7758, lng: 2.0067,
+        icon: "😇", race: "Êtres de lumière",
+        description: "Des êtres de lumière, ils ont des ailes et une auréole lumineuse. C'est la zone la plus calme et pacifique de la map, on y croit ou pas mais c'est comme ça.",
+        population: 32226
+      },
+      {
+        name: "Les Mureaux",
+        lat: 48.9908, lng: 1.9128,
+        icon: "🛶", race: "Orcs du fleuve",
+        description: "C'est les Orcs du fleuve, ils tentent de couler les bateaux qui passent pour piller le butin. Pose jamais tes filets sans regarder en arrière.",
+        population: 32830
+      },
+      {
+        name: "Houilles",
+        lat: 48.9217, lng: 2.1881,
+        icon: "⛏️", race: "Nains des souterrains",
+        description: "Des nains des souterrains, ils vivent dans le noir complet sous la ville à gratter le charbon. Ne les force surtout pas à remonter à la surface, ils détestent la lumière.",
+        population: 32328
+      },
+      {
+        name: "Élancourt",
+        lat: 48.7833, lng: 1.9583,
+        icon: "🗿", race: "Géants des Collines",
+        description: "C'est les Géants des Collines, ils s'entraînent au combat en piétinant des répliques miniatures. Quand t'entends un gros boum, c'est juste eux qui s'échauffent.",
+        population: 26393
+      },
+      {
+        name: "Guyancourt",
+        lat: 48.7733, lng: 2.0742,
+        icon: "⛲", race: "Gobelins de la fontaine",
+        description: "Par contre c'est des gobelins, ils sortent tous d'une fontaine selon la légende. Évite d'y jeter une pièce, t'en fais spawn dix de plus.",
+        population: 30431
+      },
+      {
+        name: "Maisons-Laffitte",
+        lat: 48.9472, lng: 2.1453,
+        icon: "🦄", race: "Centaures bourgeois",
+        description: "Des centaures version bourgeois, genre mi licornes mi humain qui laissent une traînée arc-en-ciel partout où ils passent. C'est joli mais c'est snob aussi.",
+        population: 23629
+      },
+      {
+        name: "Versailles",
+        lat: 48.8014, lng: 2.1301,
+        icon: "👑", race: "Nobles Absolus",
+        description: "Le Haut-Château, le bastion des Nobles Absolus. Ils ont un sort passif de « Mépris Suprême » qui paralyse les gueux à 200 mètres à la ronde.",
+        population: 85771
+      },
+      {
+        name: "Vélizy-Villacoublay",
+        lat: 48.7833, lng: 2.1947,
+        icon: "🦅", race: "Hommes-Oiseaux (Aarakocras)",
+        description: "Les Hommes-Oiseaux, des Aarakocras qui contrôlent l'espace aérien et qui jettent des projectiles depuis le ciel. T'as intérêt à lever la tête quand tu marches dessous.",
+        population: 22308
+      },
+      {
+        name: "Achères",
+        lat: 48.9711, lng: 2.0742,
+        icon: "☣️", race: "Skavens toxiques",
+        description: "Je suis désolé c'est aussi des hommes-rats, des skavens qui manipulent du poison et des gaz toxiques. Une vieille rivalité avec ceux de Maurepas, paraît-il.",
+        population: 21437
+      },
+      {
+        name: "Saint-Cyr-l'École",
+        lat: 48.7969, lng: 2.0683,
+        icon: "⚔️", race: "Guerriers humains",
+        description: "Ville humaine qui forme les soldats du 78, discipline stricte, que des guerriers sans émotions ça. Tu leur sors une blague, tu te prends un regard de granit.",
+        population: 21006
+      },
+      {
+        name: "Carrières-sous-Poissy",
+        lat: 48.9486, lng: 2.0339,
+        icon: "👹", race: "Trolls des cavernes",
+        description: "Oui ce sont des trolls des cavernes, ils sont en guerre ouverte contre les nains de Poissy. Tu choisis ton camp ou tu prends le pont d'à côté.",
+        population: 17021
+      },
+      {
+        name: "La Celle-Saint-Cloud",
+        lat: 48.8492, lng: 2.1361,
+        icon: "🦇", race: "Vampires de la finance",
+        description: "Les Saigneurs de la Finance, oui c'est des vampires qui se nourrissent de liquide, ils laissent rien ruisseler eux. Si t'arrives à leur arracher un centime, t'es déjà mort.",
+        population: 21455
       }
     ]
   }

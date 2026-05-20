@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A single-page interactive fantasy-themed map of French departments. Currently covers eleven departments — 13 (Bouches-du-Rhône), 33 (Gironde), 38 (Isère), 59 (Nord), 62 (Pas-de-Calais), 67 (Bas-Rhin), 69 (Rhône), 73 (Savoie), 74 (Haute-Savoie), 77 (Seine-et-Marne), 78 (Yvelines) — for a total of 151 cities. The map opens in a France-wide view with one marker per department; zooming past threshold 9 swaps in that department's individual city markers. Each commune is reimagined as a fantasy location (elves, dwarves, trolls, hobbits, vampires bourgeois, skavens marseillais, drakéides calaisiens, etc.) with a short in-character French description. UI text is in French. Processed source videos live in `sources/done/`; videos still to integrate land directly in `sources/`.
+A single-page interactive fantasy-themed map of French departments. Currently covers eleven departments — 13 (Bouches-du-Rhône), 33 (Gironde), 38 (Isère), 59 (Nord), 62 (Pas-de-Calais), 67 (Bas-Rhin), 69 (Rhône), 73 (Savoie), 74 (Haute-Savoie), 77 (Seine-et-Marne), 78 (Yvelines) — for a total of 166 cities. The map opens in a France-wide view with one marker per department; zooming past threshold 9 swaps in that department's individual city markers. Each commune is reimagined as a fantasy location (elves, dwarves, trolls, hobbits, vampires bourgeois, skavens marseillais, drakéides calaisiens, etc.) with a short in-character French description. UI text is in French. Processed source videos live in `sources/done/`; videos still to integrate land directly in `sources/`.
 
 The project is split into three files: `index.html` (markup), `styles.css` (styles), `script.js` (data + behavior).
 
@@ -26,7 +26,7 @@ Three files, each with a single responsibility:
 
 - **Data source of truth**: the `regions` object at the top of `script.js`, keyed by department code (`"13"`, `"33"`, `"38"`, `"59"`, `"62"`, `"69"`, `"73"`, `"74"`, `"77"`). Each region carries its own header text (`title`, `h1`, `headerP`, `legendH3`, `intro`), its viewport (`center`, `zoom`), and a `cities[]` array. Each city entry has `name`, `lat`, `lng`, `icon` (emoji), `race` (fantasy label), `description` (in-character French blurb), `population`.
 - **Two-tier marker model**:
-  - At boot, `buildAllMarkers()` builds 10 **region markers** (one per department, displayed at `region.center`, big circular badge with the dept code) and 137 **city markers** (one per `region.cities[]` entry). They live in two `L.layerGroup`s: `regionLayer` and `cityLayer`.
+  - At boot, `buildAllMarkers()` builds 11 **region markers** (one per department, displayed at `region.center`, big circular badge with the dept code) and 166 **city markers** (one per `region.cities[]` entry). They live in two `L.layerGroup`s: `regionLayer` and `cityLayer`.
   - `updateMarkerLayers()` listens to `zoomend` and swaps the active layer based on `ZOOM_THRESHOLD = 9`: zoom < 9 → region markers, zoom ≥ 9 → city markers.
   - Click on a region marker = `map.flyTo(region.center, region.zoom)` (zooms past threshold → expansion).
 - **Dominant region detection**: `computeDominantRegion()` returns `null` when zoom < 9 (Vue France), otherwise the dept whose `region.center` is euclidean-closest to `map.getCenter()`. Recomputed on every `moveend`.
