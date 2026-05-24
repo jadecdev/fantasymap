@@ -1292,6 +1292,102 @@ const regions = {
         population: 21455
       }
     ]
+  },
+  "95": {
+    label: "95 — Val-d'Oise",
+    title: "⚔️ Carte Fantasy du 95 - Val-d'Oise",
+    h1: "⚔️ Carte Fantasy du 95 ⚔️",
+    headerP: "Val-d'Oise — « Coffres-forts nains, cerises enchantées et eaux qui régénèrent »",
+    legendH3: "Peuples du 95",
+    intro: "On va dans le 95, le département où les Nains tiennent les cordons de la bourse, les hauts-elfes ont le monopole de la cerise enchantée, et où il vaut mieux pas se baigner n'importe où.",
+    center: [49.02, 2.25],
+    zoom: 10,
+    cities: [
+      {
+        name: "Enghien-les-Bains",
+        lat: 48.9697, lng: 2.3083,
+        icon: "🐠", race: "Hommes-poissons",
+        description: "Des hommes-poissons cachés au fond du lac, c'est des prédateurs ; si t'es un marcheur, tu vas te faire attaquer.",
+        population: 13160
+      },
+      {
+        name: "Saint-Ouen-l'Aumône",
+        lat: 49.0461, lng: 2.1106,
+        icon: "🪙", race: "Guilde des mendiants",
+        description: "Le fief de la guilde des mendiants : l'intégralité de la mendicité de la map est gérée là-bas, et c'est aussi un réseau d'espions bien sûr.",
+        population: 24474
+      },
+      {
+        name: "Argenteuil",
+        lat: 48.9472, lng: 2.2467,
+        icon: "💰", race: "Nains de la Banque de Fer",
+        description: "La Banque de Fer, c'est le coffre-fort du 95. Des Nains qui contrôlent toute l'économie depuis d'immenses forteresses blindées.",
+        population: 110210
+      },
+      {
+        name: "Montmorency",
+        lat: 48.9919, lng: 2.3217,
+        icon: "🍒", race: "Hauts-Elfes de la cerise",
+        description: "C'est des hauts-elfes bien sûr, ils ont le monopole de la cerise enchantée — celle qui régénère tous tes points de vie, je te le rappelle.",
+        population: 21915
+      },
+      {
+        name: "Soisy-sous-Montmorency",
+        lat: 48.9897, lng: 2.3033,
+        icon: "🧝", race: "Demi-elfes frustrés",
+        description: "C'est les demi-elfes frustrés qui vivent sous le joug des hauts-elfes d'à côté. Un jour ils vont se révolter, je pense.",
+        population: 17540
+      },
+      {
+        name: "Goussainville",
+        lat: 49.0289, lng: 2.4669,
+        icon: "👻", race: "Spectres & esprits errants",
+        description: "Une zone maudite où le temps s'est arrêté. C'est hanté par des spectres et des esprits errants qui se mettent à hurler dès qu'un aventurier passe par là.",
+        population: 32102
+      },
+      {
+        name: "Persan",
+        lat: 49.1547, lng: 2.2722,
+        icon: "🐱", race: "Khajiits marchands",
+        description: "Des Khajiits forcément, une race de félins sournois et marchands qui contrôlent la frontière nord sur les rives de l'Oise. Méfie-toi surtout de leur poudre magique.",
+        population: 11953
+      },
+      {
+        name: "Osny",
+        lat: 49.0556, lng: 2.0589,
+        icon: "🍃", race: "Hobbits pêcheurs",
+        description: "C'est des hobbits, ils passent leur vie à pêcher dans les étangs, à nourrir les canards et à faire de la contrebande de bière tiède.",
+        population: 17421
+      },
+      {
+        name: "Saint-Brice-sous-Forêt",
+        lat: 49.0044, lng: 2.3539,
+        icon: "🦉", race: "Séléniens mi-hibou mi-ours",
+        description: "Des Séléniens, mi-hibou mi-ours, un peuple plutôt pacifique — sauf en période de pleine lune, parce que c'est la période d'accouplement.",
+        population: 14625
+      },
+      {
+        name: "Bezons",
+        lat: 48.9261, lng: 2.2169,
+        icon: "👺", race: "Gobelins fouisseurs",
+        description: "Une ville de gobelins, ils passent leur temps à creuser des trous et des tranchées, c'est un vrai terrain miné.",
+        population: 30157
+      },
+      {
+        name: "Cormeilles-en-Parisis",
+        lat: 48.9692, lng: 2.1956,
+        icon: "🗿", race: "Golems de plâtre",
+        description: "Ce sont des golems de plâtre, ils ont l'air très impressionnants comme ça, mais avec un peu d'eau tu peux les affronter facilement.",
+        population: 25086
+      },
+      {
+        name: "Eaubonne",
+        lat: 48.9939, lng: 2.2806,
+        icon: "💧", race: "Nymphes guérisseuses",
+        description: "La ville des nymphes, meilleur endroit pour restaurer ton mana : leurs eaux soignent les malédictions et te régénèrent, et les nymphes font pas payer cher.",
+        population: 25030
+      }
+    ]
   }
 };
 
