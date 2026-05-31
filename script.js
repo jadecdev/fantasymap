@@ -1386,6 +1386,214 @@ const regions = {
         icon: "💧", race: "Nymphes guérisseuses",
         description: "La ville des nymphes, meilleur endroit pour restaurer ton mana : leurs eaux soignent les malédictions et te régénèrent, et les nymphes font pas payer cher.",
         population: 25030
+      },
+      {
+        name: "Cergy",
+        lat: 49.0361, lng: 2.0631,
+        icon: "💀", race: "Académie des nécromanciens",
+        description: "L'académie des nécromanciens. À l'approche du week-end, ils viennent tous vider leur mana dans la rue, et ça rend les nuits complètement chaotiques.",
+        population: 70906
+      },
+      {
+        name: "Vauréal",
+        lat: 49.0322, lng: 2.0294,
+        icon: "🌳", race: "Sylvains des bois",
+        description: "Des sylvains, des esprits des bois bienveillants faits d'écorce blanche et de sève dorée. Ils veillent sur la vallée ; le seul vrai risque là-bas, c'est de mourir d'ennui.",
+        population: 16258
+      },
+      {
+        name: "Sannois",
+        lat: 48.9711, lng: 2.2581,
+        icon: "🦅", race: "Griffons de la Colline",
+        description: "Les Griffons de la Colline, des bêtes à plumes et à serres féroces. Le nid principal est tout en haut de la colline — loot ultra rare, mais bon courage pour y monter.",
+        population: 26537
+      },
+      {
+        name: "Pontoise",
+        lat: 49.0506, lng: 2.1014,
+        icon: "🕳️", race: "Esprits des souterrains",
+        description: "La ville a l'air parfaitement normale en surface, mais les esprits des souterrains rôdent dans les caves dès que la nuit tombe.",
+        population: 31970
+      },
+      {
+        name: "Jouy-le-Moutier",
+        lat: 49.0089, lng: 2.0408,
+        icon: "🍄", race: "Hommes-taupes",
+        description: "Des hommes-taupes, ouais. Ils cultivent des champignons sous terre, et si tu piétines leurs galeries ou leurs cultures, ils jaillissent du sol pour te briser les chevilles à coups de pioche.",
+        population: 16044
+      },
+      {
+        name: "Sarcelles",
+        lat: 48.9961, lng: 2.3786,
+        icon: "🏢", race: "Golems de béton",
+        description: "Des golems de béton brut, insensibles à la magie, aux projectiles et à la moindre tentative d'intimidation. Tu passes ton chemin, c'est tout.",
+        population: 59173
+      },
+      {
+        name: "Garges-lès-Gonesse",
+        lat: 48.9728, lng: 2.4006,
+        icon: "😈", race: "Démons",
+        description: "C'est des démons. Il vaut mieux pas en parler.",
+        population: 41791
+      },
+      {
+        name: "Gonesse",
+        lat: 48.9872, lng: 2.4500,
+        icon: "🥖", race: "Paladins-boulangers",
+        description: "La guilde des meuniers, des espèces de paladins-boulangers. Leurs rations de combat te soignent 100% des points de vie d'un coup.",
+        population: 26336
+      },
+      {
+        name: "Éragny",
+        lat: 49.0186, lng: 2.0917,
+        icon: "🦎", race: "Hommes-lézards",
+        description: "Des hommes-lézards qui traînent dans les marécages. Ils te chassent à la sarbacane empoisonnée, planqués dans les buissons.",
+        population: 16980
+      },
+      {
+        name: "L'Isle-Adam",
+        lat: 49.1108, lng: 2.2256,
+        icon: "🧚", race: "Fées flottantes",
+        description: "La ville des fées, qui flotte au-dessus de l'eau. C'est la zone la plus mignonne et la plus reposante du 95 : le PVP y est carrément désactivé.",
+        population: 11587
+      },
+      {
+        name: "Ermont",
+        lat: 48.9908, lng: 2.2603,
+        icon: "🚦", race: "Gnomes aiguilleurs",
+        description: "On est sur des gnomes, plutôt efficaces et utiles : c'est eux qui gèrent tout l'aiguillage de la région.",
+        population: 29112
+      },
+      {
+        name: "Franconville",
+        lat: 48.9881, lng: 2.2281,
+        icon: "🛒", race: "Gobelins Marchands",
+        description: "Les Gobelins Marchands. Toute la ville est un immense marché à ciel ouvert tenu par des gobelins capitalistes, qui te vendent des armures low-cost et des potions périmées.",
+        population: 37754
+      },
+      {
+        name: "Saint-Leu-la-Forêt",
+        lat: 49.0167, lng: 2.2500,
+        icon: "🐺", race: "Loups-garous",
+        description: "C'est des loups-garous, tout simplement. Ils traquent leur proie à l'odeur — si ils te flairent, t'es déjà foutu.",
+        population: 15597
+      },
+      {
+        name: "Taverny",
+        lat: 49.0264, lng: 2.2275,
+        icon: "🍺", race: "Ivrognes de la map",
+        description: "Le point de ralliement de tous les ivrognes de la map. Les bagarres de comptoir y sont quotidiennes et l'alcool y coule à flots.",
+        population: 26296
+      },
+      {
+        name: "Domont",
+        lat: 49.0264, lng: 2.3267,
+        icon: "🏹", race: "Chasseurs fauconniers",
+        description: "On est sur des chasseurs fauconniers. Si un faucon te survole dans la ville, prépare-toi à recevoir une flèche dans la foulée.",
+        population: 16065
+      }
+    ]
+  },
+  "56": {
+    label: "56 — Morbihan",
+    title: "⚔️ Carte Fantasy du 56 - Morbihan",
+    h1: "⚔️ Carte Fantasy du 56 ⚔️",
+    headerP: "Morbihan — « Korrigans taxateurs, pirates lorientais et hobbits à crêpes »",
+    legendH3: "Peuples du 56",
+    intro: "On part en Bretagne, dans le 56, le département où les Korrigans te taxent au péage, les pirates tiennent Lorient, et où il vaut mieux savoir marcher sur l'eau avant de croiser les mages de Guidel.",
+    center: [47.82, -2.95],
+    zoom: 9,
+    cities: [
+      {
+        name: "Auray",
+        lat: 47.6678, lng: -2.9817,
+        icon: "🧈", race: "Korrigans",
+        description: "Des Korrigans, des petits êtres teigneux et fiers qui contrôlent tous les points de passage. Si tu refuses de payer leur taxe, ils te recouvrent de beurre des pieds à la tête.",
+        population: 14417
+      },
+      {
+        name: "Pontivy",
+        lat: 48.0686, lng: -2.9617,
+        icon: "🐎", race: "Cavaliers du Rohan breton",
+        description: "Les cavaliers du Rohan version bretonne. Dès que t'arrives là-bas, t'entends des trucs du genre « Où était le reste du Morbihan quand Pontivy est tombé ?! » ou « Où était Vannes quand nos lignes ont cédé ?! ». Fatigant à la longue.",
+        population: 14547
+      },
+      {
+        name: "Vannes",
+        lat: 47.6582, lng: -2.7608,
+        icon: "🏰", race: "Haut-elfes des remparts",
+        description: "Les haut-elfes, bien à l'abri derrière leurs remparts. Ils regardent le reste du 56 de haut, comme une bande de marins alcooliques.",
+        population: 54420
+      },
+      {
+        name: "Lorient",
+        lat: 47.7486, lng: -3.3667,
+        icon: "🏴‍☠️", race: "Pirates",
+        description: "Là on est sur une vraie ville de pirates : les rues sont remplies de flibustiers et de boucaniers. Si tu passes inaperçu là-bas, c'est qu'il faut sérieusement te remettre en question.",
+        population: 57846
+      },
+      {
+        name: "Saint-Avé",
+        lat: 47.6989, lng: -2.7383,
+        icon: "🌿", race: "Druides de l'arrière-pays",
+        description: "Les druides de l'arrière-pays. Ils vivent de leurs potions qu'ils refourguent aux haut-elfes de Vannes. Ils parlent pas tous notre langue, alors fais gaffe.",
+        population: 10728
+      },
+      {
+        name: "Lanester",
+        lat: 47.7639, lng: -3.3403,
+        icon: "⚙️", race: "Ferrailleurs gobelins",
+        description: "C'est la décharge de la ville pirate d'à côté. Là-dedans tu peux croiser tout et n'importe quoi : des golems de métal, des ferrailleurs gobelins... que du loot inutile.",
+        population: 23026
+      },
+      {
+        name: "Guidel",
+        lat: 47.7903, lng: -3.4889,
+        icon: "🌊", race: "Mages des océans",
+        description: "Les mages des océans, capables de se déplacer sur l'eau. Si tu les cherches, ils invoquent une vague géante pour te noyer sur place.",
+        population: 10760
+      },
+      {
+        name: "Hennebont",
+        lat: 47.8092, lng: -3.2747,
+        icon: "🔨", race: "Forgerons & éleveurs de chevaux",
+        description: "Des forgerons et des éleveurs de chevaux. Si tu veux une monture mythique avec des fers en mithril, c'est là-bas qu'il faut aller.",
+        population: 15765
+      },
+      {
+        name: "Ploemeur",
+        lat: 47.7333, lng: -3.4333,
+        icon: "⛏️", race: "Nains de Kaolin",
+        description: "Les nains de Kaolin, qui vivent de l'extraction de la roche blanche. Avec, ils forgent des armures hyper fragiles mais totalement résistantes à la magie.",
+        population: 18039
+      },
+      {
+        name: "Ploërmel",
+        lat: 47.9311, lng: -2.3992,
+        icon: "🏹", race: "Rangers de Brocéliande",
+        description: "Les gardiens de la forêt, des rangers archers. Si t'as une quête liée à Brocéliande, faut passer par eux — et ils vont tout faire pour t'en dissuader. Niveau 100 minimum.",
+        population: 9525
+      },
+      {
+        name: "Séné",
+        lat: 47.6178, lng: -2.7561,
+        icon: "🪶", race: "Hommes-hérons",
+        description: "Des hommes-hérons, parce que pourquoi pas. Un peuple pacifique et ultra-observateur, ils passent leurs journées à guetter le mouvement des marées.",
+        population: 8821
+      },
+      {
+        name: "Larmor-Plage",
+        lat: 47.7050, lng: -3.3781,
+        icon: "🦞", race: "Hommes-Homards",
+        description: "Les Hommes-Homards, qu'on appelle aussi les crustacés de la haute. Si tu t'en prends à un de leurs congénères, ils t'enfouissent la tête dans le sable.",
+        population: 8204
+      },
+      {
+        name: "Quéven",
+        lat: 47.7919, lng: -3.4156,
+        icon: "🥞", race: "Hobbits des dolmens",
+        description: "Des hobbits des dolmens, un peuple 100% tranquille. Ils passent leur vie à festoyer, à retourner des crêpes et à boire du cidre en écoutant les joueurs de biniou.",
+        population: 8677
       }
     ]
   }
@@ -1407,7 +1615,7 @@ const headerP = document.querySelector('#header > p');
 const legendH3 = legendEl.querySelector('h3');
 
 const ZOOM_THRESHOLD = 9;
-const FRANCE_BOUNDS = L.latLngBounds([[43.0, -1.5], [51.5, 8.3]]);
+const FRANCE_BOUNDS = L.latLngBounds([[43.0, -3.7], [51.5, 8.3]]);
 
 const cityMarkers = [];
 const regionMarkers = [];
