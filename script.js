@@ -1293,6 +1293,123 @@ const regions = {
       }
     ]
   },
+  "92": {
+    label: "92 — Hauts-de-Seine",
+    title: "⚔️ Carte Fantasy du 92 - Hauts-de-Seine",
+    h1: "⚔️ Carte Fantasy du 92 ⚔️",
+    headerP: "Hauts-de-Seine — « Tours de verre, péages elfiques et guildes hautaines »",
+    legendH3: "Peuples du 92",
+    intro: "On va dans le 92, une zone hautaine bordée par la Seine, pleine de tours de verre, de péages exorbitants et de peuples qui te jugent dès que tu franchis leurs portes.",
+    center: [48.83, 2.25],
+    zoom: 11,
+    cities: [
+      {
+        name: "Antony",
+        lat: 48.7536, lng: 2.2986,
+        icon: "🐴", race: "Palefreniers",
+        description: "C'est les palefreniers. Tu laisses ton cheval là-bas quand t'arrives dans la map. Ça sent un peu le crottin mais c'est bien pratique.",
+        population: 62549
+      },
+      {
+        name: "Châtillon",
+        lat: 48.8019, lng: 2.2922,
+        icon: "🍺", race: "Nains brasseurs",
+        description: "Des nains, mais ils ont arrêté de miner donc ils se sont reconvertis dans le houblon. Maintenant c'est plus la pioche, c'est la chope.",
+        population: 37841
+      },
+      {
+        name: "Issy-les-Moulineaux",
+        lat: 48.8243, lng: 2.2700,
+        icon: "📡", race: "Mages des ondes",
+        description: "Les mages des ondes. Ils t'attaquent à distance avec des sorts bizarres genre « Bande Passante Saturée » et « Surchauffe Réseau ». Tu finis par laguer.",
+        population: 68451
+      },
+      {
+        name: "Boulogne-Billancourt",
+        lat: 48.8356, lng: 2.2412,
+        icon: "🧝", race: "Hauts-Elfes de l'Île",
+        description: "Les Hauts-Elfes de l'Île. Déjà le 92 c'est une zone hautaine, mais eux ils méprisent encore plus : le droit d'entrée est à 600 pièces d'or.",
+        population: 121583
+      },
+      {
+        name: "Asnières-sur-Seine",
+        lat: 48.9100, lng: 2.2850,
+        icon: "🐺", race: "Lycanthropes du cimetière",
+        description: "Lycanthropes du cimetière. Des hommes-loups et des esprits canins qui rôdent sur les berges, extrêmement dangereux. T'as pas envie de traîner là-bas la nuit.",
+        population: 86512
+      },
+      {
+        name: "Courbevoie",
+        lat: 48.8970, lng: 2.2522,
+        icon: "🗿", race: "Ville des Géants",
+        description: "La ville des géants. Ils vivent entre 200 et 300 ans, et si t'es respectueux sur leurs terres, tout ira bien.",
+        population: 81840
+      },
+      {
+        name: "Levallois-Perret",
+        lat: 48.8939, lng: 2.2877,
+        icon: "🗝️", race: "Guilde des voleurs",
+        description: "Le fief de la guilde des voleurs. Depuis que l'ancien Baron est tombé, tout le monde cherche la cachette de son butin.",
+        population: 66082
+      },
+      {
+        name: "Bois-Colombes",
+        lat: 48.9172, lng: 2.2683,
+        icon: "🌿", race: "Druides chiants",
+        description: "Des druides chiants : si t'as le malheur de jeter un papier par terre ou de parler trop fort après 20h, ils t'enferment dans une cage de ronces.",
+        population: 28915
+      },
+      {
+        name: "Rueil-Malmaison",
+        lat: 48.8769, lng: 2.1806,
+        icon: "🎖️", race: "Soldats de l'Empire",
+        description: "Les soldats de l'Empire. Des fanatiques ultra rigides formés au combat militaire depuis leur enfance.",
+        population: 78152
+      },
+      {
+        name: "Chaville",
+        lat: 48.8089, lng: 2.1894,
+        icon: "🐈", race: "Khajiits forestiers",
+        description: "Des Khajiits forestiers. Ils vendent de l'herbe de contrebande, une des meilleures de la map.",
+        population: 20408
+      },
+      {
+        name: "Fontenay-aux-Roses",
+        lat: 48.7894, lng: 2.2906,
+        icon: "🌹", race: "Dryades",
+        description: "Les dryades, des créatures florales pacifiques. C'est le meilleur spot pour te purifier, mais par contre leur sève magique coûte une blinde.",
+        population: 24361
+      },
+      {
+        name: "Bagneux",
+        lat: 48.7969, lng: 2.3122,
+        icon: "🪓", race: "Orcs",
+        description: "C'est des orcs, une zone de non-droit et de combat brut. Les guerriers se battent au corps à corps avec des masses d'armes et des pioches.",
+        population: 42251
+      },
+      {
+        name: "Meudon",
+        lat: 48.8136, lng: 2.2350,
+        icon: "🪨", race: "Halfelins",
+        description: "C'est des Halfelins, pas bien méchants, mais il leur arrive de monter sur la colline pour balancer des caillasses.",
+        population: 45541
+      },
+      {
+        name: "Montrouge",
+        lat: 48.8186, lng: 2.3194,
+        icon: "😈", race: "Tieffelins",
+        description: "Les Tieffelins, les mi-hommes mi-démons de la frontière. Si tu payes pas la taxe, ils te collent une malédiction de brûlure qui siphonne tes points de vie dès que tu passes les portes de la ville.",
+        population: 50167
+      },
+      {
+        name: "Sceaux",
+        lat: 48.7775, lng: 2.2906,
+        icon: "🛡️", race: "Paladins de l'Excellence",
+        description: "Les paladins de l'Excellence, le summum de l'aristocratie intellectuelle. Des guerriers en armure blanche et pull sur les épaules qui te jugent sur ta grammaire.",
+        population: 19679
+      }
+    ]
+  },
   "95": {
     label: "95 — Val-d'Oise",
     title: "⚔️ Carte Fantasy du 95 - Val-d'Oise",
