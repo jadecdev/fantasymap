@@ -1407,6 +1407,111 @@ const regions = {
         icon: "🛡️", race: "Paladins de l'Excellence",
         description: "Les paladins de l'Excellence, le summum de l'aristocratie intellectuelle. Des guerriers en armure blanche et pull sur les épaules qui te jugent sur ta grammaire.",
         population: 19679
+      },
+      {
+        name: "Nanterre",
+        lat: 48.8924, lng: 2.2069,
+        icon: "💀", race: "Draugr",
+        description: "C'est des Draugr, et en ce moment avec tout le Skyrim RP qui tourne ça tombe plutôt bien. Ils sortent à la nuit tombée pour chasser les vivants et faucher les bourses des étudiants.",
+        population: 96807
+      },
+      {
+        name: "Colombes",
+        lat: 48.9236, lng: 2.2522,
+        icon: "💪", race: "Berserks",
+        description: "C'est des Berserks, ils sont là pour te briser les genoux. Surtout va pas confondre cet endroit avec Bois-Colombes, c'est pas du tout les mêmes manières.",
+        population: 85177
+      },
+      {
+        name: "Malakoff",
+        lat: 48.8175, lng: 2.2992,
+        icon: "✊", race: "Rebelles",
+        description: "Les rebelles. Ils refusent la modernité et s'attaquent à tout mage qui tenterait de leur jeter un sort de gentrification.",
+        population: 30930
+      },
+      {
+        name: "Gennevilliers",
+        lat: 48.9333, lng: 2.2950,
+        icon: "⚓", race: "Contrebandiers des docks",
+        description: "Une ville où orcs, trolls, gobelins et humains se mélangent avec un seul but : contrôler les docks et faire tourner la contrebande.",
+        population: 48400
+      },
+      {
+        name: "Clichy",
+        lat: 48.9044, lng: 2.3061,
+        icon: "🚧", race: "Gobelins du chantier",
+        description: "Des gobelins très bien organisés qui ont monté un chantier perpétuel dans toute la ville, histoire de pouvoir te tendre une embuscade à chaque coin de rue.",
+        population: 62800
+      },
+      {
+        name: "Clamart",
+        lat: 48.8014, lng: 2.2661,
+        icon: "🦀", race: "Hommes-crabes",
+        description: "Des hommes-crabes. Bon, je sais pas si c'est le nom qui fait crabe, mais ils ont des grosses pinces et t'as pas envie de finir entre.",
+        population: 53200
+      },
+      {
+        name: "Suresnes",
+        lat: 48.8706, lng: 2.2289,
+        icon: "🥬", race: "Vampires végé",
+        description: "Des vampires végé : ils refusent de consommer du sang, du coup ils se sont tournés vers la betterave et le jus de cranberry.",
+        population: 49100
+      },
+      {
+        name: "Puteaux",
+        lat: 48.8847, lng: 2.2386,
+        icon: "🤖", race: "Automates",
+        description: "Des automates qui ont été mis en marche il y a très longtemps. Ils font toutes leurs actions de manière répétitive, sans une once d'âme.",
+        population: 45400
+      },
+      {
+        name: "Châtenay-Malabry",
+        lat: 48.7653, lng: 2.2783,
+        icon: "⏳", race: "Druides temporels",
+        description: "Un maléfice a touché ces druides : ils vivent 3 siècles dans le passé, coincés dans une bulle temporelle où la cueillette est primordiale pour survivre.",
+        population: 33500
+      },
+      {
+        name: "Saint-Cloud",
+        lat: 48.8458, lng: 2.2189,
+        icon: "🎩", race: "Bourgeois sans aventure",
+        description: "C'est vraiment la ville humaine de base, aucune originalité : des bourgeois de base qui refusent l'aventure.",
+        population: 30100
+      },
+      {
+        name: "Le Plessis-Robinson",
+        lat: 48.7811, lng: 2.2628,
+        icon: "🌳", race: "Elfes des bois",
+        description: "Des elfes des bois dont la ville entière est un immense sort d'illusion. L'eau, la végétation… si tout te semble un peu trop faux, c'est parce que c'est le cas.",
+        population: 29400
+      },
+      {
+        name: "Neuilly-sur-Seine",
+        lat: 48.8847, lng: 2.2686,
+        icon: "🐲", race: "Drakéides blindés d'or",
+        description: "C'est des Drakéides blindés d'or. Rien que rester dans la ville, y a un passif qui te draine 500 pièces d'or par heure.",
+        population: 60300
+      },
+      {
+        name: "Vanves",
+        lat: 48.8231, lng: 2.2906,
+        icon: "🏡", race: "Hobbits discrets",
+        description: "C'est un village de Hobbits qui a su se faire discret au milieu de tout ce bordel. Leur tranquillité ne durera pas.",
+        population: 27800
+      },
+      {
+        name: "Villeneuve-la-Garenne",
+        lat: 48.9375, lng: 2.3267,
+        icon: "🏰", race: "Soldats du rempart",
+        description: "Les soldats du rempart qui protègent le territoire face à l'invasion potentielle du 93. Sauf que personne du 93 a jamais voulu y aller, alors on sait toujours pas ce qu'ils protègent.",
+        population: 27400
+      },
+      {
+        name: "Bourg-la-Reine",
+        lat: 48.7797, lng: 2.3142,
+        icon: "💰", race: "Repaire d'aventuriers",
+        description: "Le plus grand bordel à ciel ouvert de la map, là où les aventuriers viennent claquer tout leur or.",
+        population: 20900
       }
     ]
   },
@@ -1713,6 +1818,116 @@ const regions = {
         population: 8677
       }
     ]
+  },
+  "29": {
+    label: "29 — Finistère",
+    title: "⚔️ Carte Fantasy du 29 - Finistère",
+    h1: "⚔️ Carte Fantasy du 29 ⚔️",
+    headerP: "Finistère — « Le bout du monde, ses corsaires, ses gnomes éclusiers et ses mages du vent »",
+    legendH3: "Peuples du 29",
+    intro: "On part à l'ouest, dans le 29, le Finistère, le bout du monde breton battu par les vents : les corsaires y cherchent la cité engloutie, les vampires se cachent derrière les festivals et tout le monde sait voler.",
+    center: [48.20, -4.05],
+    zoom: 9,
+    cities: [
+      {
+        name: "Quimperlé",
+        lat: 47.8736, lng: -3.5486,
+        icon: "⚙️", race: "Gnomes éclusiers",
+        description: "C'est des gnomes qui gèrent très bien les écluses. Ils sont obligés de faire super gaffe quand même, parce qu'ils ont très vite plus pied.",
+        population: 12239
+      },
+      {
+        name: "Brest",
+        lat: 48.3904, lng: -4.4861,
+        icon: "🧱", race: "Orcs",
+        description: "C'est des Orcs qui vivent dans le béton et la pierre. Quand ils consomment de l'hydromel, ils gagnent un bonus de peau épaisse qui les protège contre les projectiles.",
+        population: 139619
+      },
+      {
+        name: "Concarneau",
+        lat: 47.8757, lng: -3.9189,
+        icon: "🧝‍♂️", race: "Hauts-Elfes",
+        description: "Des Hauts-Elfes — d'ailleurs c'est écrit en elfe — mais attention : la plupart des items vendus comme magiques là-bas sont des contrefaçons.",
+        population: 18961
+      },
+      {
+        name: "Douarnenez",
+        lat: 48.0925, lng: -4.3294,
+        icon: "🏴‍☠️", race: "Corsaires",
+        description: "C'est des corsaires. La légende dit qu'ils sont tous là pour une seule et même raison : retrouver la cité engloutie.",
+        population: 13837
+      },
+      {
+        name: "Morlaix",
+        lat: 48.5778, lng: -3.8283,
+        icon: "👹", race: "Gargouilles",
+        description: "Des gargouilles, perchées sur le viaduc. Faut pas les ignorer quand tu passes, mais faut pas non plus les fixer trop longtemps.",
+        population: 14876
+      },
+      {
+        name: "Landerneau",
+        lat: 48.4514, lng: -4.2497,
+        icon: "🧌", race: "Trolls",
+        description: "C'est des trolls, relativement pacifiques. Ils sont là pour faire du troc et dénicher des bonnes affaires.",
+        population: 16485
+      },
+      {
+        name: "Plougastel-Daoulas",
+        lat: 48.3725, lng: -4.3719,
+        icon: "🍓", race: "Druides agricoles",
+        description: "Les druides agricoles de la presqu'île. T'avise pas de voler leurs précieuses fraises ou tu serviras d'engrais.",
+        population: 13500
+      },
+      {
+        name: "Guipavas",
+        lat: 48.4344, lng: -4.4006,
+        icon: "🌬️", race: "Mages du vent",
+        description: "C'est les mages du vent, tout le monde sait voler là-bas. Le plus simple, c'est encore de louer un griffon dans cette ville.",
+        population: 14900
+      },
+      {
+        name: "Fouesnant",
+        lat: 47.8919, lng: -4.0072,
+        icon: "🧜‍♀️", race: "Sirènes",
+        description: "C'est des sirènes un peu huppées. Te fais pas avoir par leurs eaux ou leurs breuvages : le but, c'est de te piquer ton or.",
+        population: 9800
+      },
+      {
+        name: "Le Relecq-Kerhuon",
+        lat: 48.4006, lng: -4.3919,
+        icon: "👺", race: "Gobelins",
+        description: "Bon, le nom sonne un peu trop gobelins, voilà. Ils sont à l'embouchure du fleuve. C'est vraiment très cher d'y laisser son bateau, mais il sera bien protégé.",
+        population: 11900
+      },
+      {
+        name: "Plouzané",
+        lat: 48.3792, lng: -4.6181,
+        icon: "🗼", race: "Esprit du phare",
+        description: "C'est un donjon, c'est pas une ville. Le trésor protégé par l'esprit du phare n'a pas encore été loot, mais bon, faut affronter les goules de la ville pour le récupérer.",
+        population: 12400
+      },
+      {
+        name: "Quimper",
+        lat: 47.9960, lng: -4.0969,
+        icon: "🧛", race: "Vampires",
+        description: "Une ville de vampires : sous couvert d'un festival de Cornouaille, ils en profitent pour faire des sacrifices. Te laisse pas avoir par l'ambiance.",
+        population: 63849
+      },
+      {
+        name: "Pont-l'Abbé",
+        lat: 47.8656, lng: -4.2208,
+        icon: "🧙‍♀️", race: "Sorcières et sorciers",
+        description: "Directement des sorcières et des sorciers. Tu vas les repérer très vite avec leurs tenues.",
+        population: 8500
+      },
+      {
+        name: "Landivisiau",
+        lat: 48.5072, lng: -4.0658,
+        icon: "🐎", race: "Centaures",
+        description: "C'est des centaures : si tu tentes de leur voler un étalon, ils te traquent à travers toute la Bretagne sans jamais s'arrêter.",
+        population: 9400
+      }
+    ]
   }
 };
 
@@ -1732,7 +1947,7 @@ const headerP = document.querySelector('#header > p');
 const legendH3 = legendEl.querySelector('h3');
 
 const ZOOM_THRESHOLD = 9;
-const FRANCE_BOUNDS = L.latLngBounds([[43.0, -3.7], [51.5, 8.3]]);
+const FRANCE_BOUNDS = L.latLngBounds([[43.0, -5.0], [51.5, 8.3]]);
 
 const cityMarkers = [];
 const regionMarkers = [];
