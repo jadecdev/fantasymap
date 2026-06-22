@@ -1928,6 +1928,179 @@ const regions = {
         population: 9400
       }
     ]
+  },
+  "91": {
+    label: "91 — Essonne",
+    title: "⚔️ Carte Fantasy du 91 - Essonne",
+    h1: "⚔️ Carte Fantasy du 91 ⚔️",
+    headerP: "Essonne — « Mages du feu, portes des enfers et mafia naine de l'Orge »",
+    legendH3: "Peuples du 91",
+    intro: "On va dans le 91, l'Essonne, une terre où les mages s'affrontent, les enfers sont ouverts à tous, et les nains ont monté la plus grande mafia brassicole du territoire.",
+    center: [48.57, 2.32],
+    zoom: 10,
+    cities: [
+      {
+        name: "Grigny",
+        lat: 48.6531, lng: 2.3853,
+        icon: "🔥", race: "Mages du Feu",
+        description: "Grigny c'est des mages du feu, que des têtes brûlées. Faut vraiment arriver là-bas avec l'équipement adéquat, mais y'a du très bon loot dans les souterrains.",
+        population: 27000
+      },
+      {
+        name: "Évry-Courcouronnes",
+        lat: 48.6278, lng: 2.4314,
+        icon: "😈", race: "Porte des Enfers",
+        description: "C'est la porte des enfers, remplie de diablotins et de cerbères, c'est un lieu conçu pour briser des âmes. On y trouve également une arène où les mecs sont habillés en bleu et hurlent pour des combats à mort.",
+        population: 65000
+      },
+      {
+        name: "Palaiseau",
+        lat: 48.7136, lng: 2.2458,
+        icon: "🧙", race: "Académie des Mages",
+        description: "C'est l'académie des mages mais très élitiste, il faut minimum 2000 de mana juste pour intégrer la première année.",
+        population: 35000
+      },
+      {
+        name: "Orsay",
+        lat: 48.6983, lng: 2.1858,
+        icon: "⚗️", race: "Herboristes et Alchimistes",
+        description: "C'est la ville des herboristes et des alchimistes, on y prépare des potions de virilité et des poisons de mollesse.",
+        population: 16500
+      },
+      {
+        name: "Massy",
+        lat: 48.7333, lng: 2.2667,
+        icon: "🪓", race: "Tribu d'Orcs",
+        description: "C'est une tribu d'orcs qui s'est installée là, ce qui est très pénible parce que beaucoup de gens doivent passer par là et ils ont le coup de massue facile.",
+        population: 48000
+      },
+      {
+        name: "Longjumeau",
+        lat: 48.6942, lng: 2.2975,
+        icon: "🧓", race: "Les Anciens",
+        description: "C'est les anciens, des humains qui vivent 600 ans.",
+        population: 22000
+      },
+      {
+        name: "Gif-sur-Yvette",
+        lat: 48.6789, lng: 2.1378,
+        icon: "🌿", race: "Cercle des Druides",
+        description: "On est sur des druides, je conseille pas parce qu'un jour sur deux ils sont transformés en ours.",
+        population: 22000
+      },
+      {
+        name: "Vigneux-sur-Seine",
+        lat: 48.6969, lng: 2.4178,
+        icon: "🦎", race: "Hommes-Lézards",
+        description: "C'est des hommes-lézards, tu peux y commercer du très bon poisson, ça sent un peu la vase.",
+        population: 27000
+      },
+      {
+        name: "Les Ulis",
+        lat: 48.6844, lng: 2.1681,
+        icon: "🌀", race: "Labyrinthe des Golems",
+        description: "C'est un labyrinthe, t'aventure surtout pas sans carte, en plus c'est rempli de golems et de minotaures.",
+        population: 26000
+      },
+      {
+        name: "Étampes",
+        lat: 48.4358, lng: 2.1594,
+        icon: "🌑", race: "Elfes de la Nuit",
+        description: "C'est les elfes de la nuit, ils ont été exilés, ils vivent tellement loin que les gens savent même pas qu'ils existent.",
+        population: 23000
+      },
+      {
+        name: "Athis-Mons",
+        lat: 48.7053, lng: 2.3972,
+        icon: "🎈", race: "Gobelins Aéronautes",
+        description: "Vous le savez, ceux sont des gobelins, ils cassent les pieds à tout le monde avec leurs zeppelins.",
+        population: 31000
+      },
+      {
+        name: "Chilly-Mazarin",
+        lat: 48.7192, lng: 2.3125,
+        icon: "🏰", race: "Hobbits Châtelains",
+        description: "C'est des hobbits, mais pas dans des petits trous de hobbit, ils ont tous des châteaux et des demeures exceptionnelles.",
+        population: 20000
+      },
+      {
+        name: "Ris-Orangis",
+        lat: 48.6475, lng: 2.4183,
+        icon: "🍑", race: "Hobbits des Vergers",
+        description: "Également des hobbits, mais des hobbits des vergers, eux ils bossent dans la cueillette de fruits et les confitures.",
+        population: 27000
+      },
+      {
+        name: "Corbeil-Essonnes",
+        lat: 48.6058, lng: 2.4800,
+        icon: "♻️", race: "Cité-Décharge",
+        description: "C'est la plus grande cité-décharge du territoire, les rôdeurs et récupérateurs qui y traînent récupèrent du matériel pour créer des armes de contrebande.",
+        population: 50000
+      },
+      {
+        name: "Viry-Châtillon",
+        lat: 48.6719, lng: 2.3919,
+        icon: "💧", race: "Mages de l'Eau",
+        description: "C'est les mages d'eau, les ennemis jurés de Grigny. Mais y'a pas match entre eux, ceux de Grigny se font toujours éteindre.",
+        population: 32000
+      },
+      {
+        name: "Yerres",
+        lat: 48.7175, lng: 2.4850,
+        icon: "⭐", race: "Zone de Spawn",
+        description: "C'est une zone de spawn, il s'y passe rien, que des niveaux 1 qui font le tutoriel.",
+        population: 29000
+      },
+      {
+        name: "Saint-Geneviève-des-Bois",
+        lat: 48.6458, lng: 2.3319,
+        icon: "🌳", race: "Ents Bourgeois",
+        description: "C'est des Ents un peu bourgeois, genre ils ont toujours leurs branches bien coupées et des belles écorces.",
+        population: 36000
+      },
+      {
+        name: "Brunoy",
+        lat: 48.6978, lng: 2.5047,
+        icon: "👻", race: "Spectres Aristocrates",
+        description: "C'est des spectres coincés dans le passé qui hantent leurs grands domaines en pierre. Ils refusent de t'ouvrir leurs grilles en fer forgé si ton équipement n'est pas certifié d'origine aristocratique.",
+        population: 26000
+      },
+      {
+        name: "Draveil",
+        lat: 48.6833, lng: 2.4183,
+        icon: "🦁", race: "Nid de Manticores",
+        description: "C'est un nid de manticores, n'espère pas avoir une conversation là-bas.",
+        population: 31000
+      },
+      {
+        name: "Savigny-sur-Orge",
+        lat: 48.6789, lng: 2.3481,
+        icon: "⛏️", race: "Confrérie des Nains",
+        description: "Un des quatre clans de la confrérie des nains qui contrôlent l'Orge. Ils se sont mis d'accord pour brasser de la bière, c'est désormais une véritable mafia naine.",
+        population: 37000
+      },
+      {
+        name: "Brétigny-sur-Orge",
+        lat: 48.6097, lng: 2.3050,
+        icon: "⛏️", race: "Confrérie des Nains",
+        description: "Un des clans nains de la confrérie de l'Orge. À la base ils se tapaient dessus avec les autres, mais l'appel de la bière a eu raison des hostilités.",
+        population: 26000
+      },
+      {
+        name: "Saint-Michel-sur-Orge",
+        lat: 48.6344, lng: 2.3008,
+        icon: "⛏️", race: "Confrérie des Nains",
+        description: "Troisième clan de la confrérie naine de l'Orge. Ils utilisent l'eau de la rivière pour alimenter leur empire brassicole.",
+        population: 23000
+      },
+      {
+        name: "Morsang-sur-Orge",
+        lat: 48.6567, lng: 2.3208,
+        icon: "⛏️", race: "Mafia Naine de l'Orge",
+        description: "C'était les plus violents des quatre clans nains. C'est eux qui ont imposé la trêve pour contrôler l'Orge et brasser la bière. La mafia naine, c'est eux qui mènent.",
+        population: 21000
+      }
+    ]
   }
 };
 
